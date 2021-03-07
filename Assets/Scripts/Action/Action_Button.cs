@@ -6,8 +6,10 @@ public class Action_Button : MonoBehaviour
 {
 
     [SerializeField] private GameObject Button;
-    [SerializeField] private GameObject Dialogue;
+    [SerializeField] private GameObject DialogueWindow;
 
+    bool enb;
+    
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -15,16 +17,9 @@ public class Action_Button : MonoBehaviour
 
             
             Button.SetActive(true);
+            Debug.Log("Игрок в зоне");
+            enb = true;
 
-
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                Dialogue.SetActive(true);
-            }
-
-
-
-            return;
         }
     }
 
@@ -34,19 +29,19 @@ public class Action_Button : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Button.SetActive(false);
+            enb = false;
         }
-    }
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+        if (Input.GetKeyDown(KeyCode.E) && enb == true )
+            {
+                DialogueWindow.SetActive(true);
+            }
+               
+
     }
 }

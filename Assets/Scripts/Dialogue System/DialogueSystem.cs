@@ -8,7 +8,7 @@ public class DialogueSystem : MonoBehaviour
 
     [SerializeField] Text textComponent;
     [SerializeField] Dialogue startingDialogue;
-
+    [SerializeField] private GameObject DialogueWindow;
 
 
     Dialogue dialogue;
@@ -39,32 +39,41 @@ public class DialogueSystem : MonoBehaviour
     private void ManageDialogue()
     {
         var nextDialogue = dialogue.GetNextDialogue();
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && DialogueWindow.activeSelf)
         {
-            dialogue = nextDialogue[num + 1];
+            dialogue = nextDialogue[num];
             num = num + 1;
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && DialogueWindow.activeSelf)
         {
-            dialogue = nextDialogue[num + 1];
+            dialogue = nextDialogue[num];
             num = num + 1;
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha0))
+        if (Input.GetKeyDown(KeyCode.Alpha0) && DialogueWindow.activeSelf)
         {
-            dialogue = nextDialogue[num + 1];
+            dialogue = nextDialogue[num];
             num = num + 1;
         }
         if (num > 0)
         {
-            if (Input.GetKeyDown(KeyCode.Q) && (num>0)) 
+            if (Input.GetKeyDown(KeyCode.Q) && (num>0) && DialogueWindow.activeSelf) 
             {
                 dialogue = nextDialogue[num - 1];
                 num = num - 1;
             }
         }
 
+        
+
+
+        if (nextDialogue.Length < num)
+        {
+            DialogueWindow.SetActive(false);
+        }
+
+        textComponent.text = dialogue.GetDialogueText();
 
 
     }
