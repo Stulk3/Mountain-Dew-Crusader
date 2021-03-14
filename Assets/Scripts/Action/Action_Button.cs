@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DialogueSystem;
+
+
 
 public class Action_Button : MonoBehaviour
 {
@@ -8,17 +11,17 @@ public class Action_Button : MonoBehaviour
     [SerializeField] private GameObject Button;
     [SerializeField] private GameObject DialogueWindow;
 
-    bool enb;
-    
+    bool check = false;
+
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && check==false)
         {
+            if (check == false)
 
-            
             Button.SetActive(true);
-            Debug.Log("Игрок в зоне");
-            enb = true;
+
+
 
         }
     }
@@ -26,10 +29,10 @@ public class Action_Button : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" || DialogueWindow.activeSelf) 
         {
             Button.SetActive(false);
-            enb = false;
+
         }
     }
 
@@ -37,11 +40,12 @@ public class Action_Button : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.E) && enb == true )
-            {
-                DialogueWindow.SetActive(true);
-            }
-               
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            DialogueWindow.SetActive(true);
+            check = true;
+        }
+
 
     }
 }

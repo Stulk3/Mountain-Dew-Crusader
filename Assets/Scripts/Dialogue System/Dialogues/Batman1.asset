@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Batman1
   m_EditorClassIdentifier: 
   DialogueText: Nice cock
+  CharName: "\u0411\u044D\u0442\u043C\u0435\u043D"
   nextDialogue:
   - {fileID: 11400000, guid: 84af7aae5e1d08f499586b9d32134470, type: 2}

@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+namespace DialogueSystem{
 
 public class DialogueSystem : MonoBehaviour
 {
 
     [SerializeField] Text textComponent;
+    [SerializeField] Text nameComponent;
     [SerializeField] Dialogue startingDialogue;
     [SerializeField] private GameObject DialogueWindow;
 
@@ -16,14 +18,14 @@ public class DialogueSystem : MonoBehaviour
 
 
 
-    int num = 0;
+   int num = 0;
 
 
     // Start is called before the first frame update
     void Start()
     {
         dialogue = startingDialogue;
-
+        nameComponent.text = dialogue.GetDialogueName();
         textComponent.text = dialogue.GetDialogueText();
     }
 
@@ -31,49 +33,44 @@ public class DialogueSystem : MonoBehaviour
     void Update()
     {
         ManageDialogue();
+
     }
 
-
-
+  
 
     private void ManageDialogue()
     {
         var nextDialogue = dialogue.GetNextDialogue();
-        if (Input.GetKeyDown(KeyCode.Space) && DialogueWindow.activeSelf)
+        if (Input.GetKeyDown(KeyCode.E) && DialogueWindow.activeSelf && nextDialogue.Length > 0)
         {
-            dialogue = nextDialogue[num];
-            num = num + 1;
+
+            dialogue = nextDialogue[0];
+
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && DialogueWindow.activeSelf)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && DialogueWindow.activeSelf && nextDialogue.Length > 0)
         {
-            dialogue = nextDialogue[num];
-            num = num + 1;
+            dialogue = nextDialogue[0];
+
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha0) && DialogueWindow.activeSelf)
+        if (Input.GetKeyDown(KeyCode.Alpha0) && DialogueWindow.activeSelf && nextDialogue.Length > 0)
         {
-            dialogue = nextDialogue[num];
-            num = num + 1;
-        }
-        if (num > 0)
-        {
-            if (Input.GetKeyDown(KeyCode.Q) && (num>0) && DialogueWindow.activeSelf) 
-            {
-                dialogue = nextDialogue[num - 1];
-                num = num - 1;
-            }
-        }
+            dialogue = nextDialogue[0];
 
+        }
         
 
 
-        if (nextDialogue.Length < num)
+
+        if (nextDialogue.Length == 0 && DialogueWindow.activeSelf && (Input.GetKeyDown(KeyCode.E)))
         {
+
             DialogueWindow.SetActive(false);
         }
 
         textComponent.text = dialogue.GetDialogueText();
+        nameComponent.text = dialogue.GetDialogueName();
 
 
     }
@@ -87,4 +84,5 @@ public class DialogueSystem : MonoBehaviour
 
 
 
+}
 }
