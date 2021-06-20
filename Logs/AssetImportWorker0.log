@@ -1,0 +1,393 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.11f1 (99c7afb366b3) revision 10078127'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19042.1052; Version 2009; 64bit' Language: 'ru' Physical Memory: 16151 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity Editors\2020.3.11f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/GameDev/Projects/Mountain-Dew-Crusader
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+53695
+Successfully changed project path to: C:/GameDev/Projects/Mountain-Dew-Crusader
+C:/GameDev/Projects/Mountain-Dew-Crusader
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 47.94 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.11f1 (99c7afb366b3)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity Editors/2020.3.11f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/GameDev/Projects/Mountain-Dew-Crusader/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1660 Ti (ID=0x2191)
+    Vendor:   
+    VRAM:     5991 MB
+    Driver:   27.21.14.6677
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity Editors/2020.3.11f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity Editors/2020.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity Editors/2020.3.11f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56516
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity Editors/2020.3.11f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity Editors/2020.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002613 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 47.72 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.887 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.014151 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 38.61 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.084 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.66 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2174 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.6 MB.
+System memory in use after: 97.7 MB.
+
+Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 2631.
+Total: 3.103200 ms (FindLiveObjects: 0.224500 ms CreateObjectMapping: 0.093800 ms MarkObjects: 2.690600 ms  DeleteObjects: 0.092700 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scenes
+  artifactKey: Guid(bc27b75638e14b447b464bd2fff04d3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(bc27b75638e14b447b464bd2fff04d3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a293a209eab0258cbfb3bb89ae565d4') in 0.006657 seconds
+  Import took 0.011061 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011196 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.046 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.60 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2148 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.5 MB.
+System memory in use after: 95.6 MB.
+
+Unloading 32 unused Assets to reduce memory usage. Loaded Objects now: 2635.
+Total: 1.932800 ms (FindLiveObjects: 0.220600 ms CreateObjectMapping: 0.089300 ms MarkObjects: 1.600400 ms  DeleteObjects: 0.021200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014575 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.966 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.63 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2148 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.6 MB.
+System memory in use after: 95.7 MB.
+
+Unloading 32 unused Assets to reduce memory usage. Loaded Objects now: 2639.
+Total: 2.228900 ms (FindLiveObjects: 0.210800 ms CreateObjectMapping: 0.095800 ms MarkObjects: 1.894000 ms  DeleteObjects: 0.027000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011570 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.068 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.53 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2148 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.6 MB.
+System memory in use after: 95.7 MB.
+
+Unloading 32 unused Assets to reduce memory usage. Loaded Objects now: 2643.
+Total: 2.454300 ms (FindLiveObjects: 0.294300 ms CreateObjectMapping: 0.128900 ms MarkObjects: 2.002300 ms  DeleteObjects: 0.027500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 187.147885 seconds.
+  path: Assets/BOXOPHOBIC
+  artifactKey: Guid(66696203d0bf5cf429645331d8d2592d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BOXOPHOBIC using Guid(66696203d0bf5cf429645331d8d2592d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c314e509c4e564419d977f85f054127') in 0.005334 seconds
+  Import took 0.008659 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.888300 seconds.
+  path: Assets/BOXOPHOBIC/Polyverse Skies
+  artifactKey: Guid(aa8f1060aafdbdc4cbce54c3f6347c1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BOXOPHOBIC/Polyverse Skies using Guid(aa8f1060aafdbdc4cbce54c3f6347c1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd6b04a9d4424e3268509ba51781b83d') in 0.002468 seconds
+  Import took 0.006582 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.028749 seconds.
+  path: Assets/BOXOPHOBIC/Polyverse Skies/Core
+  artifactKey: Guid(24dd6b976a2681448a8072bed6ad7ee2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BOXOPHOBIC/Polyverse Skies/Core using Guid(24dd6b976a2681448a8072bed6ad7ee2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7758a38749930ce5fd64521d32f6799f') in 0.002405 seconds
+  Import took 0.006273 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.763464 seconds.
+  path: Assets/BOXOPHOBIC/Polyverse Skies/Demo
+  artifactKey: Guid(944ba4339d95a5f469b3af7eb10a8985) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BOXOPHOBIC/Polyverse Skies/Demo using Guid(944ba4339d95a5f469b3af7eb10a8985) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db00f67f5452901f8af6790c8119fbcf') in 0.002479 seconds
+  Import took 0.006598 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.218498 seconds.
+  path: Assets/BOXOPHOBIC/User
+  artifactKey: Guid(f0aa5379d96b0e14795df45a380643fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BOXOPHOBIC/User using Guid(f0aa5379d96b0e14795df45a380643fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c06677feeb95b1feba8d7a739bfe933c') in 0.003011 seconds
+  Import took 0.006679 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.521095 seconds.
+  path: Assets/BOXOPHOBIC/Utils
+  artifactKey: Guid(a85b6dec3188bd14194e16aa24e9fd0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BOXOPHOBIC/Utils using Guid(a85b6dec3188bd14194e16aa24e9fd0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b714287b822d88fcb6bb2d69d6ed63fe') in 0.002441 seconds
+  Import took 0.006570 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.545831 seconds.
+  path: Assets/BOXOPHOBIC/Polyverse Skies/Generator
+  artifactKey: Guid(31102a75389d7be4e8f82522356fcca4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BOXOPHOBIC/Polyverse Skies/Generator using Guid(31102a75389d7be4e8f82522356fcca4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11d2d034d19249dfcdf993dcc9e720b9') in 0.004634 seconds
+  Import took 0.010165 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.538810 seconds.
+  path: Assets/BOXOPHOBIC/Polyverse Skies/Generator/Materials
+  artifactKey: Guid(4ba9f161afd4f6e46a6499381d0a4bc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BOXOPHOBIC/Polyverse Skies/Generator/Materials using Guid(4ba9f161afd4f6e46a6499381d0a4bc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8447fc192980353fcb490805d8a18059') in 0.003030 seconds
+  Import took 0.007384 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.039483 seconds.
+  path: Assets/BOXOPHOBIC/Polyverse Skies/Generator/Materials/Skybox.mat
+  artifactKey: Guid(e74324e36b5e05b4b90fcfe39d80b5fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BOXOPHOBIC/Polyverse Skies/Generator/Materials/Skybox.mat using Guid(e74324e36b5e05b4b90fcfe39d80b5fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57af2c9e79df2030680b13419aef293e') in 0.127195 seconds
+  Import took 0.130218 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.249640 seconds.
+  path: Assets/BOXOPHOBIC/Polyverse Skies/Generator/Shaders
+  artifactKey: Guid(63c25adb110bd804099d1cfd54d340b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BOXOPHOBIC/Polyverse Skies/Generator/Shaders using Guid(63c25adb110bd804099d1cfd54d340b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bca6e445b9b87e074f24b2c44733d3ce') in 0.002384 seconds
+  Import took 0.006588 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.061287 seconds.
+  path: Assets/BOXOPHOBIC/Polyverse Skies/Generator/Shaders/Rendering Clouds.mat
+  artifactKey: Guid(13dc708cc67c98145be44921d58a7f5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BOXOPHOBIC/Polyverse Skies/Generator/Shaders/Rendering Clouds.mat using Guid(13dc708cc67c98145be44921d58a7f5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a260a4d866c926d986dbfabccfd7a941') in 0.010880 seconds
+  Import took 0.014030 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.134289 seconds.
+  path: Assets/BOXOPHOBIC/Polyverse Skies/Generator/Scripts
+  artifactKey: Guid(09abb09713229cc4093a1cc78a5a4d56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BOXOPHOBIC/Polyverse Skies/Generator/Scripts using Guid(09abb09713229cc4093a1cc78a5a4d56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9001ff551752a3ee8abad91f072cabff') in 0.003875 seconds
+  Import took 0.007577 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.026448 seconds.
+  path: Assets/BOXOPHOBIC/Polyverse Skies/Generator/Scripts/Boxophobic.PolyverseSkies.Scripts.asmdef
+  artifactKey: Guid(5829c26677b511c4ab273a505814d2e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BOXOPHOBIC/Polyverse Skies/Generator/Scripts/Boxophobic.PolyverseSkies.Scripts.asmdef using Guid(5829c26677b511c4ab273a505814d2e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c910349c5d4f40ff6cbfa2b72be91bd5') in 0.005535 seconds
+  Import took 0.008722 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.107586 seconds.
+  path: Assets/BOXOPHOBIC/Polyverse Skies/Generator/Meshes
+  artifactKey: Guid(d9ecb9a7fdf73f640899499957261a0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BOXOPHOBIC/Polyverse Skies/Generator/Meshes using Guid(d9ecb9a7fdf73f640899499957261a0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '613ee8365156defc5d27838949a7e636') in 0.002323 seconds
+  Import took 0.006359 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.040310 seconds.
+  path: Assets/BOXOPHOBIC/Polyverse Skies/Generator/Meshes/Cloud_Generator.FBX
+  artifactKey: Guid(3dbe3438ed8abc34db005a02edff095e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BOXOPHOBIC/Polyverse Skies/Generator/Meshes/Cloud_Generator.FBX using Guid(3dbe3438ed8abc34db005a02edff095e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58dae0730a56d5cb09cd685a2e9da1bc') in 0.285332 seconds
+  Import took 0.288906 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000140 seconds.
+  path: Assets/BOXOPHOBIC/Polyverse Skies/Generator/Meshes/Cloud_Generator_Chunk.FBX
+  artifactKey: Guid(3f73669ea4b80494a9c631dab766a5ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BOXOPHOBIC/Polyverse Skies/Generator/Meshes/Cloud_Generator_Chunk.FBX using Guid(3f73669ea4b80494a9c631dab766a5ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '878c4aa658c09c5233983c609594bbda') in 0.022385 seconds
+  Import took 0.025914 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.053160 seconds.
+  path: Assets/BOXOPHOBIC/Polyverse Skies/Core/Editor
+  artifactKey: Guid(0212219fb5efa444fb8a72380d02c0f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BOXOPHOBIC/Polyverse Skies/Core/Editor using Guid(0212219fb5efa444fb8a72380d02c0f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22a38fb5257d48fceb388d3ef100064c') in 0.004773 seconds
+  Import took 0.008325 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.050411 seconds.
+  path: Assets/BOXOPHOBIC/Polyverse Skies/Core/Editor/Boxophobic.PolyverseSkies.Editor.asmdef
+  artifactKey: Guid(64d146cbcd54dd1458427c80d2ccbc1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BOXOPHOBIC/Polyverse Skies/Core/Editor/Boxophobic.PolyverseSkies.Editor.asmdef using Guid(64d146cbcd54dd1458427c80d2ccbc1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2afacdb3abe9c0c6a124ca0367d55403') in 0.002325 seconds
+  Import took 0.005446 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000252 seconds.
+  path: Assets/BOXOPHOBIC/Polyverse Skies/Core/Editor/Version.asset
+  artifactKey: Guid(302d182101c78ef4d9d5d199b7f3a185) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BOXOPHOBIC/Polyverse Skies/Core/Editor/Version.asset using Guid(302d182101c78ef4d9d5d199b7f3a185) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f1098eb39b9115091895d35828f6f3b') in 0.005033 seconds
+  Import took 0.008056 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.722632 seconds.
+  path: Assets/BOXOPHOBIC/Polyverse Skies/Core/Shaders
+  artifactKey: Guid(dd39e7bd9c6512c409179b6c70c63790) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BOXOPHOBIC/Polyverse Skies/Core/Shaders using Guid(dd39e7bd9c6512c409179b6c70c63790) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dedb77ab9a678fb169557fc332b14950') in 0.002447 seconds
+  Import took 0.006719 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.348032 seconds.
+  path: Assets/BOXOPHOBIC/Polyverse Skies/Core/Presets
+  artifactKey: Guid(126b74eb78232a94daf81eb84d6a244e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BOXOPHOBIC/Polyverse Skies/Core/Presets using Guid(126b74eb78232a94daf81eb84d6a244e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfc0e4c0e66c4ee82eb781a42d961192') in 0.002383 seconds
+  Import took 0.006572 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.079972 seconds.
+  path: Assets/BOXOPHOBIC/Polyverse Skies/Core/Presets/Sky 01.mat
+  artifactKey: Guid(d0523d8917957bb429a32997cb0e52b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BOXOPHOBIC/Polyverse Skies/Core/Presets/Sky 01.mat using Guid(d0523d8917957bb429a32997cb0e52b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68d1c9156cbd413ee5c01a4fa1461e4a') in 0.137921 seconds
+  Import took 0.143343 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/BOXOPHOBIC/Polyverse Skies/Core/Presets/Sky 02.mat
+  artifactKey: Guid(60dd2e7b10f2ce74e9c4478520e3f06a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BOXOPHOBIC/Polyverse Skies/Core/Presets/Sky 02.mat using Guid(60dd2e7b10f2ce74e9c4478520e3f06a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c01653f6d6fa25ef1daeb38f0ca11ff') in 0.099573 seconds
+  Import took 0.104653 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/BOXOPHOBIC/Polyverse Skies/Core/Presets/Sky 05.mat
+  artifactKey: Guid(188c8ae1d60a5e34faaf71d8ee55a065) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BOXOPHOBIC/Polyverse Skies/Core/Presets/Sky 05.mat using Guid(188c8ae1d60a5e34faaf71d8ee55a065) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5004b918a329eb7ba392edba17205f14') in 0.098527 seconds
+  Import took 0.104164 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000378 seconds.
+  path: Assets/BOXOPHOBIC/Polyverse Skies/Core/Presets/Sky 04.mat
+  artifactKey: Guid(b4d1e1180d6b45d4eaa6f6b684d18e2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BOXOPHOBIC/Polyverse Skies/Core/Presets/Sky 04.mat using Guid(b4d1e1180d6b45d4eaa6f6b684d18e2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f99ee4fcdfa16d89ce189c1eecf443d') in 0.117381 seconds
+  Import took 0.122783 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/BOXOPHOBIC/Polyverse Skies/Core/Presets/Sky 03.mat
+  artifactKey: Guid(0ff23603c187cd146bc65bf76e851175) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BOXOPHOBIC/Polyverse Skies/Core/Presets/Sky 03.mat using Guid(0ff23603c187cd146bc65bf76e851175) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f7665f83246b440510eb60c54378f81') in 0.094251 seconds
+  Import took 0.098818 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011596 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.001 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.58 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2148 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 99.0 MB.
+System memory in use after: 99.1 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 2690.
+Total: 2.456000 ms (FindLiveObjects: 0.213300 ms CreateObjectMapping: 0.075900 ms MarkObjects: 2.136200 ms  DeleteObjects: 0.028800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.020408 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.32 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.504 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.05 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2148 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 99.0 MB.
+System memory in use after: 99.1 MB.
+
+Unloading 32 unused Assets to reduce memory usage. Loaded Objects now: 2694.
+Total: 3.555000 ms (FindLiveObjects: 0.547700 ms CreateObjectMapping: 0.272200 ms MarkObjects: 2.704900 ms  DeleteObjects: 0.028300 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
