@@ -38,8 +38,7 @@ public class MovementScript : MonoBehaviour
         if (Movement > 0)
         {
             JotaroSprite.flipX = false;
-        }
-        Debug.Log(Movement);    
+        } 
     }
 
 

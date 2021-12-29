@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActionButton : MonoBehaviour
+public class Action : MonoBehaviour
 {
 
 
