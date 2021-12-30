@@ -20,21 +20,8 @@ public class Dialogue : ScriptableObject
     {
         return DialogueText;
     }
-
-    
-
     public Dialogue[] GetNextDialogue()
     {
         return nextDialogue;
     }
-
-
-
-
-
-
-
-
-
-
 }
