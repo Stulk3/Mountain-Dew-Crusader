@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrivenerProject Template="No" Version="1.5" Creator="SCRWIN-1.9.16.0" Device="DESKTOP-SFA8FDJ" Modified="2021-03-25 18:40:33 +0300" ModID="D1394582-ABED-45C0-8A78-A0143CE3DE80">
+<ScrivenerProject Template="No" Version="1.5" Creator="SCRWIN-1.9.16.0" Device="WorkspacePC" Modified="2021-12-31 03:22:15 +0300" ModID="5E30328C-EAE7-42D4-836F-79E3A48771A9">
     <Binder>
         <BinderItem ID="13" UUID="8290031F-83D1-4DF5-B35B-87877F81B852" Created="2010-10-26 17:33:29 +0300" Modified="2016-07-11 16:40:08 +0300" Type="Text">
             <Title>Screenplay Format</Title>
@@ -27,8 +27,8 @@
                 </CorkboardSettings>
             </CorkboardAndOutliner>
             <Children>
-                <BinderItem ID="19" UUID="42A9D144-2FD3-45F9-9E36-B7199B8B7B2C" Created="2010-10-26 17:37:05 +0300" Modified="2021-01-28 16:58:52 +0300" Type="Folder">
-                    <Title>Scenes</Title>
+                <BinderItem ID="19" UUID="42A9D144-2FD3-45F9-9E36-B7199B8B7B2C" Created="2010-10-26 17:37:05 +0300" Modified="2021-12-31 03:22:05 +0300" Type="Folder">
+                    <Title>Старый Скрипт</Title>
                     <MetaData>
                         <IncludeInCompile>Yes</IncludeInCompile>
                     </MetaData>
@@ -49,7 +49,7 @@
                             </MetaData>
                             <TextSettings>
                                 <TextMode>Script</TextMode>
-                                <TextSelection>25,0</TextSelection>
+                                <TextSelection>111,0</TextSelection>
                                 <Target Type="Words">0</Target>
                             </TextSettings>
                             <CorkboardAndOutliner>
@@ -76,7 +76,7 @@
                             </MetaData>
                             <TextSettings>
                                 <TextMode>Script</TextMode>
-                                <TextSelection>3093,0</TextSelection>
+                                <TextSelection>2698,0</TextSelection>
                                 <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
@@ -92,6 +92,68 @@
                             </TextSettings>
                         </BinderItem>
                         <BinderItem ID="32" UUID="C8FFAF27-8DCD-4F4C-86D8-96E3A32CF3B3" Created="2021-01-28 16:18:45 +0300" Modified="2021-02-11 19:30:37 +0300" Type="Text">
+                            <Title>Scene-4</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                            </MetaData>
+                            <TextSettings>
+                                <TextMode>Script</TextMode>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="33" UUID="DF214A86-88B5-41E4-BEEF-5F919903A937" Created="2021-12-31 03:22:08 +0300" Modified="2021-12-31 03:22:13 +0300" Type="Folder">
+                    <Title>Новый Скрипт</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <Target Type="Words">0</Target>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="34" UUID="81E7247A-99FA-4D41-BC22-9BE9DC060DC8" Created="2021-12-31 03:22:08 +0300" Modified="2021-12-31 03:22:08 +0300" Type="Text">
+                            <Title>Вступление </Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>rtf</FileExtension>
+                            </MetaData>
+                            <TextSettings>
+                                <TextMode>Script</TextMode>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="35" UUID="0EC7BB3E-BDD2-4488-8ED1-7EFCA5B0B407" Created="2021-12-31 03:22:08 +0300" Modified="2021-12-31 03:22:08 +0300" Type="Text">
+                            <Title>Сцена в бане</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                            </MetaData>
+                            <TextSettings>
+                                <TextMode>Script</TextMode>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="36" UUID="2DB71E95-9A37-4110-AD7A-CC47D2A1BC73" Created="2021-12-31 03:22:08 +0300" Modified="2021-12-31 03:22:08 +0300" Type="Text">
+                            <Title>Вне подозрений</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                            </MetaData>
+                            <TextSettings>
+                                <TextMode>Script</TextMode>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="37" UUID="3B6D8814-C76A-493C-8DF6-A18349816321" Created="2021-12-31 03:22:08 +0300" Modified="2021-12-31 03:22:08 +0300" Type="Text">
+                            <Title>В Беспамятстве</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                            </MetaData>
+                            <TextSettings>
+                                <TextMode>Script</TextMode>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="38" UUID="2A6E5F63-CAA7-460B-A3EA-28C615F4FBB3" Created="2021-12-31 03:22:08 +0300" Modified="2021-12-31 03:22:08 +0300" Type="Text">
                             <Title>Scene-4</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
@@ -266,7 +328,7 @@
     <ProjectTargets>
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="Yes" Deadline="2011-04-21 11:44:59 +0100" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="No" ResetType="Midnight" DeterminedFromDeadline="No" CanWriteOnDeadlineDate="No" WritingDays="">0</SessionTarget>
-        <PreviousSession Words="1" Characters="46" Date="2021-03-25 18:39:55 +0300"/>
+        <PreviousSession Words="787" Characters="5010" Date="2021-12-30 16:28:02 +0300"/>
     </ProjectTargets>
     <Collections>
         <Collection Type="Binder" ID="6AE1732B-8E66-4B56-B7E2-C7B1462B31DB" Color="0.901961 0.917647 0.933333">

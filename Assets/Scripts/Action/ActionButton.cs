@@ -5,7 +5,7 @@ using DialogueSystem;
 
 
 
-public class Action_Button : MonoBehaviour
+public class ActionButton : MonoBehaviour
 {
 
     [SerializeField] private GameObject Button;
@@ -17,12 +17,8 @@ public class Action_Button : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" && check==false)
         {
-            if (check == false)
-
             Button.SetActive(true);
-
-
-
+            check = true;
         }
     }
 
@@ -32,18 +28,15 @@ public class Action_Button : MonoBehaviour
         if (collision.gameObject.tag == "Player" || DialogueWindow.activeSelf) 
         {
             Button.SetActive(false);
-
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && check == true)
         {
             DialogueWindow.SetActive(true);
-            check = true;
         }
 
 

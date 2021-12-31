@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.Animations;
 
 public class MovementScript : MonoBehaviour
 {
@@ -9,7 +10,9 @@ public class MovementScript : MonoBehaviour
     Animator JotaroAnimator;
     SpriteRenderer JotaroSprite;
     float Movement;
-    
+
+    //[SerializeField] Animator FadeAnimator;
+
     void Start()
     {
         JotaroTransform = this.GetComponent<Transform>();
@@ -20,11 +23,11 @@ public class MovementScript : MonoBehaviour
     
     void Update()
     {
-
+        //if (Input.GetKeyDown("k")) FadeAnimator.SetTrigger("FadeTrigger");
         Movement = Input.GetAxis("Horizontal");
         if (Movement != 0) 
         {
-            JotaroTransform.Translate( new Vector2(Movement, 0) * MovementMultiplier * Time.deltaTime);
+            Move();
             RunAnimation();
         }
         else
@@ -51,4 +54,10 @@ public class MovementScript : MonoBehaviour
     {
         JotaroAnimator.Play("Idle");
     }
+
+    void Move()
+    {
+        JotaroTransform.Translate(new Vector2(Movement, 0) * MovementMultiplier * Time.deltaTime);
+    }
+
 }
