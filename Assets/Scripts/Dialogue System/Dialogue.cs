@@ -7,14 +7,13 @@ using UnityEngine;
 [CreateAssetMenu(menuName ="Dialogue")]
 public class Dialogue : ScriptableObject
 {
-
+    [TextArea(1, 1)] [SerializeField] string CharacterName;
     [TextArea(10, 14)] [SerializeField] string DialogueText;
-    [TextArea(10, 14)] [SerializeField] string CharName;
     [SerializeField] Dialogue[] nextDialogue;
 
     public string GetDialogueName()
         {
-            return CharName;
+            return CharacterName;
         }
     public string GetDialogueText()
     {
