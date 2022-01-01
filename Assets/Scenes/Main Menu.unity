@@ -1492,7 +1492,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1107942728}
   - component: {fileID: 1107942729}
-  - component: {fileID: 1107942730}
   m_Layer: 0
   m_Name: Scene Changer
   m_TagString: Untagged
@@ -1528,21 +1527,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FadeAnimator: {fileID: 786080162}
---- !u!114 &1107942730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1107942727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ede7be0481e4de84285a24870710d642, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DefaultCursor: {fileID: 0}
-  OnClickCursor: {fileID: 0}
-  cursorMode: 0
 --- !u!1 &1175132247
 GameObject:
   m_ObjectHideFlags: 0
@@ -2629,6 +2613,7 @@ GameObject:
   - component: {fileID: 2034407511}
   - component: {fileID: 2034407514}
   - component: {fileID: 2034407515}
+  - component: {fileID: 2034407516}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2816,3 +2801,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2034407516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034407510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ede7be0481e4de84285a24870710d642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultCursor: {fileID: 2800000, guid: 79850e253b1d73441b9b2ead3b475a47, type: 3}
+  OnClickCursor: {fileID: 2800000, guid: 98b5e8adcbf93434981fbf3b9303bf1e, type: 3}
+  cursorMode: 0

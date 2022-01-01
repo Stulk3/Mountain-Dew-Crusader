@@ -46,7 +46,7 @@ public class DialogueSystem : MonoBehaviour
         }
         if (nextDialogue.Length <= 0 && ActionComponent.DialogueWindowIsActive && (Input.GetKeyDown(KeyCode.E)))
         {
-            Debug.Log("Робит");
+            //Debug.Log("Робит");
             DialogueIsOver = true;
             ActionComponent.CloseDialogueWindow();
         }

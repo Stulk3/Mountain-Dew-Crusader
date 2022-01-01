@@ -17,12 +17,14 @@ public class ActionComponent : MonoBehaviour
     [SerializeField] private float TriggerColliderY = 2.5f;
 
 
+    public DialogueSystem.DialogueSystem DialogueSystem;
+
     public bool DialogueWindowIsActive = false;
     bool InActionRadius = false;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && InActionRadius==false)
+        if (collision.gameObject.tag == "Player" && InActionRadius==false && DialogueSystem.DialogueIsOver == false)
         {
             Button.SetActive(true);
             InActionRadius = true;
@@ -32,7 +34,7 @@ public class ActionComponent : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && InActionRadius == true) 
+        if (collision.gameObject.tag == "Player" && InActionRadius == true && DialogueSystem.DialogueIsOver == false) 
         {
             Button.SetActive(false);
             InActionRadius = false;
@@ -52,12 +54,13 @@ public class ActionComponent : MonoBehaviour
     private void Awake()
     {
         SetUpTriggerCollider();
+        SetDialogueSystemComponent();
     }
 
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && InActionRadius == true)
+        if (Input.GetKeyDown(KeyCode.E) && InActionRadius == true && DialogueWindowIsActive==false && DialogueSystem.DialogueIsOver==false )
         {
             DialogueWindow.SetActive(true);
             DialogueWindowIsActive = true;
@@ -76,6 +79,10 @@ public class ActionComponent : MonoBehaviour
     {
         DialogueWindow.SetActive(false);
         DialogueWindowIsActive = false;
+    }
+    private void SetDialogueSystemComponent()
+    {
+        DialogueSystem = this.gameObject.GetComponent<DialogueSystem.DialogueSystem>();
     }
 
 }

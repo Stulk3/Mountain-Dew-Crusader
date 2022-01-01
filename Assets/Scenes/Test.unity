@@ -170,7 +170,7 @@ MonoBehaviour:
   nameComponent: {fileID: 935261406}
   startingDialogue: {fileID: 11400000, guid: 503d772d525fa704eaab223e46abf6ee, type: 2}
   ActionComponent: {fileID: 0}
-  DialogueisOver: 0
+  DialogueIsOver: 0
 --- !u!1 &97468482
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,7 +688,7 @@ MonoBehaviour:
   nameComponent: {fileID: 935261406}
   startingDialogue: {fileID: 11400000, guid: 503d772d525fa704eaab223e46abf6ee, type: 2}
   ActionComponent: {fileID: 0}
-  DialogueisOver: 0
+  DialogueIsOver: 0
 --- !u!114 &576612554
 MonoBehaviour:
   m_ObjectHideFlags: 0
