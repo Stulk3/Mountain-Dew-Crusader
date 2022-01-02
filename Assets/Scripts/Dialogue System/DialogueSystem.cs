@@ -4,25 +4,37 @@ using UnityEngine;
 using UnityEngine.UI;
 namespace DialogueSystem{
 
+[RequireComponent(typeof(ActionComponent))]
+[RequireComponent(typeof(AudioSource))]
 public class DialogueSystem : MonoBehaviour
 {
 
-    [SerializeField] Text textComponent;
-    [SerializeField] Text nameComponent;
+    [SerializeField] Text TextComponent;
+    [SerializeField] Text NameComponent;
     [SerializeField] Dialogue startingDialogue;
 
+    [SerializeField] AudioClip SoundEffect;
+
+    [SerializeField] AudioClip CharacterVoice;
+
+    public AudioSource DialogueVoiceSource;
     public ActionComponent ActionComponent;
     public bool DialogueIsOver = false;
-    Dialogue dialogue;
+    private Dialogue Dialogue;
     int num = 0;
 
     void Start()
     {
-        dialogue = startingDialogue;
-        nameComponent.text = dialogue.GetDialogueName();
-        textComponent.text = dialogue.GetDialogueText();
+        Dialogue = startingDialogue;
+        NameComponent.text = Dialogue.GetDialogueName();
+        TextComponent.text = Dialogue.GetDialogueText();
+        DialogueVoiceSource = this.GetComponent<AudioSource>();
+
+        if (ActionComponent == null)
+        {
+            ActionComponent = this.GetComponent<ActionComponent>();
+        }
         
-        ActionComponent = this.GetComponent<ActionComponent>();
         
     }
     void Update()
@@ -32,27 +44,58 @@ public class DialogueSystem : MonoBehaviour
     }
     private void ManageDialogue()
     {
-        var nextDialogue = dialogue.GetNextDialogue();
+        
+        DialogueWorkConditions();
+        
+        TextComponent.text = Dialogue.GetDialogueText();
+        NameComponent.text = Dialogue.GetDialogueName();
+        CharacterVoice = Dialogue.GetCharacterVoice();
+        if (Input.GetKeyDown(KeyCode.E) && CharacterVoice != null && !DialogueIsOver)
+        {
+                
+                DialogueVoiceSource.clip = CharacterVoice;
+                DialogueVoiceSource.Play();
+            }
+
+
+    }
+
+
+    private void DialogueWorkConditions()
+    {
+        var nextDialogue = Dialogue.GetNextDialogue();
         if (Input.GetKeyDown(KeyCode.E) && ActionComponent.DialogueWindowIsActive && nextDialogue.Length > 0)
         {
-
-            dialogue = nextDialogue[0];
-
+                Dialogue = nextDialogue[0];
+                StopVoiceAudioPlaying();
         }
+
         if (Input.GetKeyDown(KeyCode.Mouse0) && ActionComponent.DialogueWindowIsActive && nextDialogue.Length > 0)
         {
-            dialogue = nextDialogue[0];
-
+                Dialogue = nextDialogue[0];
+                StopVoiceAudioPlaying();
         }
+
+        if (Input.GetKeyDown(KeyCode.Mouse0) && ActionComponent.DialogueWindowIsActive && nextDialogue.Length > 0)
+        {
+                Dialogue = nextDialogue[0];
+                StopVoiceAudioPlaying();
+            }
+        //// Закрытие окна когда диалог закончен ////
         if (nextDialogue.Length <= 0 && ActionComponent.DialogueWindowIsActive && (Input.GetKeyDown(KeyCode.E)))
         {
-            //Debug.Log("Робит");
+
             DialogueIsOver = true;
+            StopVoiceAudioPlaying();
             ActionComponent.CloseDialogueWindow();
         }
-        textComponent.text = dialogue.GetDialogueText();
-        nameComponent.text = dialogue.GetDialogueName();
+
     }
+
+    void StopVoiceAudioPlaying()
+        {
+            DialogueVoiceSource.Stop();
+        }
 
 }
 }

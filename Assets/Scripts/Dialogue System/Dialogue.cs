@@ -9,6 +9,8 @@ public class Dialogue : ScriptableObject
 {
     [TextArea(1, 1)] [SerializeField] string CharacterName;
     [TextArea(10, 14)] [SerializeField] string DialogueText;
+    [SerializeField] AudioClip SoundEffect;
+    [SerializeField] AudioClip CharacterVoice;
     [SerializeField] Dialogue[] nextDialogue;
 
     public string GetDialogueName()
@@ -23,4 +25,14 @@ public class Dialogue : ScriptableObject
     {
         return nextDialogue;
     }
+    public AudioClip GetCharacterVoice()
+    {
+        return CharacterVoice;
+    }
+
+    public AudioClip GetSoundEffect()
+    {
+        return SoundEffect;
+    }
+
 }
