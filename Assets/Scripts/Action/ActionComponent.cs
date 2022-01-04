@@ -50,20 +50,6 @@ public class ActionComponent : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && InActionRadius == false && DialogueIsOver == false)
-        {
-
-            InActionRadius = true;
-            if (Button != null)
-            {
-                Button.SetActive(true);
-            }
-
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
         switch (Action)
         {
             case (ActionType.Dialogue):
@@ -74,9 +60,8 @@ public class ActionComponent : MonoBehaviour
             case (ActionType.OnlyDialogue): break;
         }
     }
-    ///////////////////////////////////////////////////////////////////////////////////////
 
-    private void DialogueOnTriggerEnter(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         switch (Action)
         {
@@ -86,6 +71,20 @@ public class ActionComponent : MonoBehaviour
             case (ActionType.Item): break;
 
             case (ActionType.OnlyDialogue): break;
+        }
+    }
+    ///////////////////////////////////////////////////////////////////////////////////////
+
+    private void DialogueOnTriggerEnter(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player" && InActionRadius == false && DialogueIsOver == false)
+        {
+
+            InActionRadius = true;
+            if (Button != null)
+            {
+                Button.SetActive(true);
+            }
         }
     }
     private void DialogueOnTriggerExit(Collider2D collision)
