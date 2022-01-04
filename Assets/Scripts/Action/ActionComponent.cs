@@ -8,10 +8,11 @@ using UnityEditor;
 public class ActionComponent : MonoBehaviour
 {
     public ActionType Action;
-    public enum ActionType
+    public enum ActionType : int
     {
-        Dialogue = 0,
-        Item = 1
+        Dialogue = 1,
+        Item = 2,
+        OnlyDialogue = 3
     }
 
     [Space(height: 5f)]
@@ -25,17 +26,31 @@ public class ActionComponent : MonoBehaviour
     [SerializeField] public GameObject DialogueWindow;
 
 
-    public bool Kek;
-
 
     public DialogueSystem.DialogueSystem DialogueSystem;
 
-    public bool DialogueWindowIsActive = false;
+    bool DialogueWindowIsActive = false;
     bool InActionRadius = false;
+    bool DialogueIsOver;
 
+
+    ///////////////////////////////////////////////////////////////////////////////////////
+    private void Awake()
+    {
+        SetUpActionComponent();
+    }
+    void Update()
+    {
+
+        DetermineBoolVariables();
+
+        CheckForDialogueBeginning();
+
+        ActionButtonDisappear();
+    }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && InActionRadius == false && DialogueSystem.DialogueIsOver == false)
+        if (collision.gameObject.tag == "Player" && InActionRadius == false && DialogueIsOver == false)
         {
 
             InActionRadius = true;
@@ -49,9 +64,35 @@ public class ActionComponent : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && InActionRadius == true && DialogueSystem.DialogueIsOver == false)
+        switch (Action)
         {
-            
+            case (ActionType.Dialogue):
+                DialogueOnTriggerEnter(collision); break;
+
+            case (ActionType.Item): break;
+
+            case (ActionType.OnlyDialogue): break;
+        }
+    }
+    ///////////////////////////////////////////////////////////////////////////////////////
+
+    private void DialogueOnTriggerEnter(Collider2D collision)
+    {
+        switch (Action)
+        {
+            case (ActionType.Dialogue):
+                DialogueOnTriggerExit(collision); break;
+
+            case (ActionType.Item): break;
+
+            case (ActionType.OnlyDialogue): break;
+        }
+    }
+    private void DialogueOnTriggerExit(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player" && InActionRadius == true && DialogueIsOver == false)
+        {
+
             InActionRadius = false;
             if (Button != null)
             {
@@ -59,6 +100,8 @@ public class ActionComponent : MonoBehaviour
             }
         }
     }
+    ///////////////////////////////////////////////////////////////////////////////////////
+   
 
 
     private void SetUpTriggerCollider()
@@ -70,28 +113,51 @@ public class ActionComponent : MonoBehaviour
     }
 
 
-    private void Awake()
+   
+    void CheckForDialogueBeginning()
     {
-        SetUpTriggerCollider();
-        if (DialogueSystem == null)
+        if (Input.GetKeyDown(KeyCode.E) && InActionRadius == true && DialogueWindowIsActive == false && DialogueIsOver == false)
         {
-            SetDialogueSystemComponent();
+            OpenDialogueWindow();
         }
-        
+        else if (Input.GetKeyDown(KeyCode.Mouse0) && InActionRadius == true && DialogueWindowIsActive == false && DialogueIsOver == false)
+        {
+            OpenDialogueWindow();
+        }
+        else if (Input.GetKeyDown(KeyCode.Space) && InActionRadius == true && DialogueWindowIsActive == false && DialogueIsOver == false)
+        {
+            OpenDialogueWindow();
+        }
     }
 
-
-    void Update()
+    void SetUpActionComponent()
     {
-        if (Input.GetKeyDown(KeyCode.E) && InActionRadius == true && DialogueWindowIsActive == false && DialogueSystem.DialogueIsOver == false)
+        /////// Диалог ///////
+        if (Action == ActionType.Dialogue)
         {
-            DialogueWindow.SetActive(true);
-            DialogueWindowIsActive = true;
+            SetUpTriggerCollider();
+            if (DialogueSystemComponentOnObject())
+            {
+                SetDialogueSystemComponent();
+            }
         }
 
-        ActionButtonAppearenceCondition();
+        /////// Предмет ///////
+        else if (Action == ActionType.Item)
+        {
+            SetUpTriggerCollider();
+        }
+
+
+        /////// Диалог-Новелла ///////
+        else if (Action == ActionType.OnlyDialogue)
+        {
+
+        }
     }
-    private void ActionButtonAppearenceCondition()
+
+   
+    private void ActionButtonDisappear()
     {
         if (DialogueWindowIsActive)
         {
@@ -103,25 +169,69 @@ public class ActionComponent : MonoBehaviour
         DialogueWindow.SetActive(false);
         DialogueWindowIsActive = false;
     }
+
+    public void OpenDialogueWindow()
+    {
+        DialogueWindow.SetActive(true);
+        DialogueWindowIsActive = true;
+    }
+
     private void SetDialogueSystemComponent()
     {
         DialogueSystem = this.gameObject.GetComponent<DialogueSystem.DialogueSystem>();
     }
+
+    private bool DialogueSystemComponentOnObject()
+    {
+        return this.GetComponent<DialogueSystem.DialogueSystem>() != null;
+    }
+
+    private void DetermineBoolVariables()
+    {
+        DialogueIsOver = DialogueSystem.GetDialogueIsOver();
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////////
+
+
+
+    public bool GetInActionRadius()
+    {
+        return InActionRadius;
+    }
+    public bool GetDialogueWindowIsActive()
+    {
+        return DialogueWindowIsActive;
+    }
+
+
+
+}
+
+    ///////////////////////////////////////////////////////////////////////////////////////
+public class ActionComponentEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        ActionComponent ActionComponent = (ActionComponent)target;
+
+
+        if (ActionComponent.Action == ActionComponent.ActionType.Dialogue)
+        {
+
+        }
+
+
+        else if (ActionComponent.Action == ActionComponent.ActionType.Item)
+        {
+
+        }
+        
+        else if (ActionComponent.Action == ActionComponent.ActionType.OnlyDialogue)
+        {
+
+        }
+    }
+    
     
 }
-//[CustomEditor(typeof(ActionComponent))]
-//public class ActionComponentEditor : Editor
-//{
-
-//    public override void OnInspectorGUI()
-//    {
-//        var ActionComponent = target as ActionComponent;
-//        ActionComponent.Kek = EditorGUILayout.Toggle("Hide Fields", ActionComponent.Kek);
-//        if (ActionComponent.Action == 0)
-//        {
-//            EditorGUI.indentLevel++;
-//            EditorGUILayout.PrefixLabel("Object");
-//            ActionComponent. = EditorGUILayout.ObjectField(ActionComponent.DialogueWindow);
-//        }
-//    }
-//}
