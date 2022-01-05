@@ -7,13 +7,13 @@ namespace DialogueSystem{
 
 [RequireComponent(typeof(ActionComponent))]
 [RequireComponent(typeof(AudioSource))]
+[RequireComponent(typeof(DialogueVertexAnimator))]
 public class DialogueSystem : MonoBehaviour
 {
     [Header("Text Settings")]
     [SerializeField] TextMeshProUGUI NameComponent;
     [SerializeField] TextMeshProUGUI TextComponent;
     
-    [SerializeField] private float DelayBetweenText;
     [Space(5f)]
     [Header("Starting Dialogue")]
     [SerializeField] Dialogue startingDialogue;
@@ -27,22 +27,26 @@ public class DialogueSystem : MonoBehaviour
     public AudioSource DialogueVoiceSource;
     public ActionComponent ActionComponent;
     
+    [Space(5f)]
+    [Header("Components")]
+    [SerializeField] private DialogueVertexAnimator DialogueVertexAnimator;
+    public AudioSourceGroup AudioSourceGroup;
         
+
     private bool DialogueIsOver = false;
     
     private bool InActionRadius;
     private bool DialogueWindowIsActive;
 
     private Dialogue Dialogue;
-    private int index;
+    private bool DialogueIsPlayed = false;
 
 
     ////////////////////////
-
-    private string[] SplitedText;
-    private string CurrentText;
-    private string TextToAnimate;
-    private string PreviosWord;
+    void Awake()
+        {
+            DialogueVertexAnimator = new DialogueVertexAnimator(TextComponent, AudioSourceGroup);
+        }
 
     void Start()
     {
@@ -54,7 +58,10 @@ public class DialogueSystem : MonoBehaviour
         {
             ActionComponent = this.GetComponent<ActionComponent>();
         }
-        
+        if (DialogueVertexAnimator == null)
+        {
+            DialogueVertexAnimator = this.GetComponent<DialogueVertexAnimator>();
+        }
         
     }
     void Update()
@@ -71,70 +78,46 @@ public class DialogueSystem : MonoBehaviour
         //TextComponent.text = Dialogue.GetDialogueText();
         NameComponent.text = Dialogue.GetDialogueName();
         CharacterVoice = Dialogue.GetCharacterVoice();
-        
-        AnimateText(Dialogue.GetDialogueText());
+            if (DialogueWindowIsActive && !DialogueIsPlayed)
+            {
+                PlayDialogue(Dialogue.GetDialogueText());
+            }
+        //AnimateText(Dialogue.GetDialogueText());
 
     }
-
-    private void AnimateText(string text)
+        private Coroutine typeRoutine = null;
+        void PlayDialogue(string message)
         {
-            if (DialogueWindowIsActive)
-            {
-                SplitedText = text.Split(' ');
-                
-                TextToAnimate = text;
-
-                StartAnimation(0);
-            }
+            DialogueIsPlayed = true;
+            this.EnsureCoroutineStopped(ref typeRoutine);
+            DialogueVertexAnimator.textAnimating = false;
+            List<DialogueCommand> commands = DialogueUtility.ProcessInputString(message, out string totalTextMessage);
+            typeRoutine = StartCoroutine(DialogueVertexAnimator.AnimateTextIn(commands, totalTextMessage, CharacterVoice, null));
+            
         }
 
-
-    private IEnumerable StartAnimation(float StartDelay)
-        {
-            yield return new WaitForSeconds(StartDelay);
-
-            CurrentText = "";
-
-            PreviosWord = SplitedText[0];
-            Debug.Log(PreviosWord);
-            TextComponent.text = "<i>" + SplitedText[index] + "</i>";
-
-            while(index < SplitedText.Length)
-            {
-                yield return new WaitForSeconds(DelayBetweenText);
-
-                CurrentText += PreviosWord + " ";
-                TextComponent.text = CurrentText + "<i>" + SplitedText[index] +"</i>";
-
-
-                PreviosWord = SplitedText[index];
-
-                index++;
-            }
-
-            yield return new WaitForSeconds(DelayBetweenText);
-            TextComponent.text = TextToAnimate;
-
-        }
-    private void ManageDialogueChange()
+        private void ManageDialogueChange()
     {
         var nextDialogue = Dialogue.GetNextDialogue();
-        if (Input.GetKeyDown(KeyCode.E) && DialogueWindowIsActive && nextDialogue.Length > 0)
+        if (Input.GetKeyDown(KeyCode.E) && DialogueWindowIsActive && nextDialogue.Length > 0 && !DialogueVertexAnimator.textAnimating)
         {
                 Dialogue = nextDialogue[0];
                 StopVoiceAudioPlaying();
-        }
+                DialogueIsPlayed = false;
+            }
 
-        else if (Input.GetKeyDown(KeyCode.Mouse0) && DialogueWindowIsActive && nextDialogue.Length > 0)
+        else if (Input.GetKeyDown(KeyCode.Mouse0) && DialogueWindowIsActive && nextDialogue.Length > 0 && !DialogueVertexAnimator.textAnimating)
         {
                 Dialogue = nextDialogue[0];
                 StopVoiceAudioPlaying();
-        }
+                DialogueIsPlayed = false;
+            }
 
-        else if (Input.GetKeyDown(KeyCode.Space) && DialogueWindowIsActive && nextDialogue.Length > 0)
+        else if (Input.GetKeyDown(KeyCode.Space) && DialogueWindowIsActive && nextDialogue.Length > 0 && !DialogueVertexAnimator.textAnimating)
         {
                 Dialogue = nextDialogue[0];
                 StopVoiceAudioPlaying();
+                DialogueIsPlayed = false;
             }
         //// Закрытие окна когда диалог закончен ////
         if (nextDialogue.Length <= 0 && DialogueWindowIsActive && (Input.GetKeyDown(KeyCode.E)))

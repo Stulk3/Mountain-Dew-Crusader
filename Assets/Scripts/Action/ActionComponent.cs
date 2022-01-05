@@ -25,13 +25,13 @@ public class ActionComponent : MonoBehaviour
     [SerializeField] private GameObject Button;
     [SerializeField] public GameObject DialogueWindow;
 
-
-
+    [Space(height: 5f)]
+    [Header("Scripts")]
     public DialogueSystem.DialogueSystem DialogueSystem;
 
     bool DialogueWindowIsActive = false;
     bool InActionRadius = false;
-    bool DialogueIsOver;
+    bool DialogueIsOver = false;
 
 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -187,7 +187,10 @@ public class ActionComponent : MonoBehaviour
 
     private void DetermineBoolVariables()
     {
-        DialogueIsOver = DialogueSystem.GetDialogueIsOver();
+        if (DialogueSystemComponentOnObject())
+        {
+            DialogueIsOver = DialogueSystem.GetDialogueIsOver();
+        }
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////

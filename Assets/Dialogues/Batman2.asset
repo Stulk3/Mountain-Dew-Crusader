@@ -15,5 +15,5 @@ MonoBehaviour:
   CharacterName: "\u0411\u044D\u0442\u043C\u0435\u043D"
   DialogueText: "\u0417\u0430\u0445\u043E\u0434\u0438 \u0432 \u0434\u043E\u043C"
   SoundEffect: {fileID: 0}
-  CharacterVoice: {fileID: 8300000, guid: b89f9ceb9822dda468be4a3dc606c74c, type: 3}
+  CharacterVoice: {fileID: 8300000, guid: 13554d2257e69414a8594eacf75bd332, type: 3}
   nextDialogue: []

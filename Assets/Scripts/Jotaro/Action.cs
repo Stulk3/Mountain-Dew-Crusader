@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,5 +23,10 @@ public class Action : MonoBehaviour
         {
             Debug.Log("Работает");
         }
+    }
+
+    internal void Invoke()
+    {
+        throw new NotImplementedException();
     }
 }
