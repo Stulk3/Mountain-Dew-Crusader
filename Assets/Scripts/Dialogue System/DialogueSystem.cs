@@ -80,7 +80,9 @@ public class DialogueSystem : MonoBehaviour
         CharacterVoice = Dialogue.GetCharacterVoice();
             if (DialogueWindowIsActive && !DialogueIsPlayed)
             {
+                NameComponent.text = SetDialogueName(Dialogue.GetDialogueName());
                 PlayDialogue(Dialogue.GetDialogueText());
+                
             }
         //AnimateText(Dialogue.GetDialogueText());
 
@@ -94,6 +96,12 @@ public class DialogueSystem : MonoBehaviour
             List<DialogueCommand> commands = DialogueUtility.ProcessInputString(message, out string totalTextMessage);
             typeRoutine = StartCoroutine(DialogueVertexAnimator.AnimateTextIn(commands, totalTextMessage, CharacterVoice, null));
             
+        }
+
+        string SetDialogueName(string name)
+        {
+            List<DialogueCommand> commands = DialogueUtility.ProcessInputString(name, out string FinalName);
+            return FinalName;
         }
 
         private void ManageDialogueChange()
