@@ -29,6 +29,9 @@ public class ActionComponent : MonoBehaviour
     [Header("Scripts")]
     public DialogueSystem.DialogueSystem DialogueSystem;
 
+    [SerializeField] private float Delay = 0;
+
+
     bool DialogueWindowIsActive = false;
     bool InActionRadius = false;
     bool DialogueIsOver = false;
@@ -39,12 +42,26 @@ public class ActionComponent : MonoBehaviour
     {
         SetUpActionComponent();
     }
+    private void Start()
+    {
+        if (Action == ActionType.OnlyDialogue)
+        {
+            StartDialogue(Delay);
+        }
+    }
     void Update()
     {
 
         DetermineBoolVariables();
 
-        CheckForDialogueBeginning();
+        switch (Action)
+        {
+            case (ActionType.Dialogue):
+                CheckForDialogueBeginning(); break;
+
+            case (ActionType.Item): break;
+        }
+        
 
         ActionButtonDisappear();
     }
@@ -128,6 +145,10 @@ public class ActionComponent : MonoBehaviour
             OpenDialogueWindow();
         }
     }
+    void StartOnlyDialogue()
+    {
+        StartCoroutine(StartDialogue(Delay));
+    }
 
     void SetUpActionComponent()
     {
@@ -151,7 +172,10 @@ public class ActionComponent : MonoBehaviour
         /////// Диалог-Новелла ///////
         else if (Action == ActionType.OnlyDialogue)
         {
-
+            if (DialogueSystemComponentOnObject())
+            {
+                SetDialogueSystemComponent();
+            }
         }
     }
 
@@ -207,7 +231,15 @@ public class ActionComponent : MonoBehaviour
     }
 
 
+    public IEnumerator StartDialogue(float Delay)
+    {
 
+        yield return new WaitForSeconds(Delay);
+        
+        OpenDialogueWindow();
+        Debug.Log("ДА");
+        
+    }
 }
 
     ///////////////////////////////////////////////////////////////////////////////////////
