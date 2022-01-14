@@ -819,7 +819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bb6e562ec27de14c8fc1ad5ec5890f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Action: 3
+  Action: 1
   TriggerColliderX: 3.2
   TriggerColliderY: 2.5
   Button: {fileID: 254013281}
