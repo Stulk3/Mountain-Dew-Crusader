@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrivenerProject Template="No" Version="1.5" Creator="SCRWIN-1.9.16.0" Device="WorkspacePC" Modified="2022-01-15 23:51:36 +0300" ModID="90DEE124-3A32-4BFC-8615-E284ADFD82B0">
+<ScrivenerProject Template="No" Version="1.5" Creator="SCRWIN-1.9.16.0" Device="WorkspacePC" Modified="2022-01-16 22:15:32 +0300" ModID="319F9F55-5964-4FAC-8456-849835A72E28">
     <Binder>
         <BinderItem ID="13" UUID="8290031F-83D1-4DF5-B35B-87877F81B852" Created="2010-10-26 17:33:29 +0300" Modified="2016-07-11 16:40:08 +0300" Type="Text">
             <Title>Screenplay Format</Title>
@@ -56,18 +56,18 @@
                             </MetaData>
                             <TextSettings>
                                 <TextMode>Script</TextMode>
-                                <TextSelection>74,0</TextSelection>
+                                <TextSelection>89,0</TextSelection>
                                 <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem ID="47" UUID="CC83CFE8-9C24-4787-94AC-9A16919FD7A2" Created="2022-01-14 01:15:57 +0300" Modified="2022-01-14 01:25:26 +0300" Type="Text">
+                        <BinderItem ID="47" UUID="CC83CFE8-9C24-4787-94AC-9A16919FD7A2" Created="2022-01-14 01:15:57 +0300" Modified="2022-01-16 00:42:56 +0300" Type="Text">
                             <Title>Сигарета</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                             </MetaData>
                             <TextSettings>
                                 <TextMode>Script</TextMode>
-                                <TextSelection>417,0</TextSelection>
+                                <TextSelection>891,0</TextSelection>
                                 <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
@@ -102,18 +102,19 @@
                             </MetaData>
                             <TextSettings>
                                 <TextMode>Script</TextMode>
-                                <TextSelection>17,0</TextSelection>
+                                <TextSelection>668,0</TextSelection>
                                 <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem ID="49" UUID="DF94EE22-50A6-4DD0-A8A1-12C04D7346AB" Created="2022-01-14 01:26:19 +0300" Modified="2022-01-14 01:26:19 +0300" Type="Text">
-                            <Title>Поход-1</Title>
+                        <BinderItem ID="49" UUID="DF94EE22-50A6-4DD0-A8A1-12C04D7346AB" Created="2022-01-14 01:26:19 +0300" Modified="2022-01-16 22:15:30 +0300" Type="Text">
+                            <Title>Смысл</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                                 <FileExtension>rtf</FileExtension>
                             </MetaData>
                             <TextSettings>
                                 <TextMode>Script</TextMode>
+                                <TextSelection>674,0</TextSelection>
                                 <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
@@ -124,7 +125,7 @@
                             </MetaData>
                             <TextSettings>
                                 <TextMode>Script</TextMode>
-                                <TextSelection>393,0</TextSelection>
+                                <TextSelection>441,0</TextSelection>
                                 <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
@@ -455,7 +456,7 @@
     <ProjectTargets>
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="Yes" Deadline="2011-04-21 11:44:59 +0100" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="No" ResetType="Midnight" DeterminedFromDeadline="No" CanWriteOnDeadlineDate="No" WritingDays="">0</SessionTarget>
-        <PreviousSession Words="38" Characters="246" Date="2022-01-15 20:04:03 +0300"/>
+        <PreviousSession Words="220" Characters="1330" Date="2022-01-15 20:04:03 +0300"/>
     </ProjectTargets>
     <Collections>
         <Collection Type="Binder" ID="6AE1732B-8E66-4B56-B7E2-C7B1462B31DB" Color="0.901961 0.917647 0.933333">

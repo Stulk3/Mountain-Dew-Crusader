@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6571a6648fe49b40aaf79976b356af9, type: 3}
   m_Name: Batman1
   m_EditorClassIdentifier: 
-  CharacterName: "<color=#AA77E7>\u0411\u044D\u0442\u043C\u0435\u043D </color>"
+  CharacterName: "<color=#AA77E7>\u03B4\u03A9\u045F\u03B8 </color>"
   DialogueText: "<anim:Shake>\u041F\u0440\u0438\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u044E 
     </anim>\u041F\u0443\u0442\u043D\u0438\u043A!"
   SoundEffect: {fileID: 0}
