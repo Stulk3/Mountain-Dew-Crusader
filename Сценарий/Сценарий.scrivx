@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrivenerProject Template="No" Version="1.5" Creator="SCRWIN-1.9.16.0" Device="WorkspacePC" Modified="2022-01-16 22:15:32 +0300" ModID="319F9F55-5964-4FAC-8456-849835A72E28">
+<ScrivenerProject Template="No" Version="1.5" Creator="SCRWIN-1.9.16.0" Device="WorkspacePC" Modified="2022-01-19 03:26:22 +0300" ModID="94C0D413-C818-4718-AED9-190F4BBDEC51">
     <Binder>
         <BinderItem ID="13" UUID="8290031F-83D1-4DF5-B35B-87877F81B852" Created="2010-10-26 17:33:29 +0300" Modified="2016-07-11 16:40:08 +0300" Type="Text">
             <Title>Screenplay Format</Title>
@@ -49,6 +49,18 @@
                                 <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
+                        <BinderItem ID="50" UUID="F59367E8-0FCD-4F93-B36C-2D7C2DAFACCE" Created="2022-01-19 02:37:04 +0300" Modified="2022-01-19 02:53:26 +0300" Type="Text">
+                            <Title>Звонок</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>rtf</FileExtension>
+                            </MetaData>
+                            <TextSettings>
+                                <TextMode>Script</TextMode>
+                                <TextSelection>699,0</TextSelection>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                        </BinderItem>
                         <BinderItem ID="35" UUID="0EC7BB3E-BDD2-4488-8ED1-7EFCA5B0B407" Created="2021-12-31 03:22:08 +0300" Modified="2022-01-14 01:10:16 +0300" Type="Text">
                             <Title>Встреча</Title>
                             <MetaData>
@@ -67,7 +79,7 @@
                             </MetaData>
                             <TextSettings>
                                 <TextMode>Script</TextMode>
-                                <TextSelection>891,0</TextSelection>
+                                <TextSelection>824,53</TextSelection>
                                 <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
@@ -90,23 +102,23 @@
                             </MetaData>
                             <TextSettings>
                                 <TextMode>Script</TextMode>
-                                <TextSelection>214,0</TextSelection>
+                                <TextSelection>165,0</TextSelection>
                                 <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem ID="37" UUID="3B6D8814-C76A-493C-8DF6-A18349816321" Created="2021-12-31 03:22:08 +0300" Modified="2022-01-14 01:05:58 +0300" Type="Text">
-                            <Title>Телефонный звонок</Title>
+                        <BinderItem ID="37" UUID="3B6D8814-C76A-493C-8DF6-A18349816321" Created="2021-12-31 03:22:08 +0300" Modified="2022-01-19 02:38:43 +0300" Type="Text">
+                            <Title>Звонок</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                                 <FileExtension>rtf</FileExtension>
                             </MetaData>
                             <TextSettings>
                                 <TextMode>Script</TextMode>
-                                <TextSelection>668,0</TextSelection>
+                                <TextSelection>6,0</TextSelection>
                                 <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem ID="49" UUID="DF94EE22-50A6-4DD0-A8A1-12C04D7346AB" Created="2022-01-14 01:26:19 +0300" Modified="2022-01-16 22:15:30 +0300" Type="Text">
+                        <BinderItem ID="49" UUID="DF94EE22-50A6-4DD0-A8A1-12C04D7346AB" Created="2022-01-14 01:26:19 +0300" Modified="2022-01-19 02:33:41 +0300" Type="Text">
                             <Title>Смысл</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
@@ -114,7 +126,31 @@
                             </MetaData>
                             <TextSettings>
                                 <TextMode>Script</TextMode>
-                                <TextSelection>674,0</TextSelection>
+                                <TextSelection>396,5</TextSelection>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="51" UUID="DAA2EE71-37BE-4A90-863E-DA41E524FBC4" Created="2022-01-19 02:54:35 +0300" Modified="2022-01-19 03:25:39 +0300" Type="Text">
+                            <Title>Наследие</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>rtf</FileExtension>
+                            </MetaData>
+                            <TextSettings>
+                                <TextMode>Script</TextMode>
+                                <TextSelection>81,0</TextSelection>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="52" UUID="70B0C147-ECF5-4984-9765-730EDDBC1EF0" Created="2022-01-19 02:55:31 +0300" Modified="2022-01-19 03:26:21 +0300" Type="Text">
+                            <Title>Сон</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>rtf</FileExtension>
+                            </MetaData>
+                            <TextSettings>
+                                <TextMode>Script</TextMode>
+                                <TextSelection>583,0</TextSelection>
                                 <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
@@ -456,7 +492,7 @@
     <ProjectTargets>
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="Yes" Deadline="2011-04-21 11:44:59 +0100" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="No" ResetType="Midnight" DeterminedFromDeadline="No" CanWriteOnDeadlineDate="No" WritingDays="">0</SessionTarget>
-        <PreviousSession Words="220" Characters="1330" Date="2022-01-15 20:04:03 +0300"/>
+        <PreviousSession Words="299" Characters="1628" Date="2022-01-19 01:56:39 +0300"/>
     </ProjectTargets>
     <Collections>
         <Collection Type="Binder" ID="6AE1732B-8E66-4B56-B7E2-C7B1462B31DB" Color="0.901961 0.917647 0.933333">
