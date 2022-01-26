@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrivenerProject Template="No" Version="2.0" Identifier="CD5B2E8A-88F5-4777-ADD9-587E31754186" Creator="SCRWIN-3.1.1.0" Device="LAPTOP-STULK3" Modified="2022-01-22 21:05:57 +0300" ModID="9FFA725C-1B2C-4927-8033-95CA3043C54F">
+<ScrivenerProject Template="No" Version="1.5" Creator="SCRWIN-1.9.16.0" Device="WorkspacePC" Modified="2022-01-19 03:26:22 +0300" ModID="94C0D413-C818-4718-AED9-190F4BBDEC51">
     <Binder>
-        <BinderItem UUID="8290031F-83D1-4DF5-B35B-87877F81B852" Type="Text" Created="2010-10-26 17:33:29 +0300" Modified="2016-07-11 16:40:08 +0300">
+        <BinderItem ID="13" UUID="8290031F-83D1-4DF5-B35B-87877F81B852" Created="2010-10-26 17:33:29 +0300" Modified="2016-07-11 16:40:08 +0300" Type="Text">
             <Title>Screenplay Format</Title>
             <MetaData>
                 <IncludeInCompile>Yes</IncludeInCompile>
@@ -9,24 +9,35 @@
             </MetaData>
             <TextSettings>
                 <TextSelection>2861,0</TextSelection>
+                <Target Type="Words">0</Target>
             </TextSettings>
+            <CorkboardAndOutliner>
+                <CorkboardSettings>
+                    <FreeformMode>Yes</FreeformMode>
+                </CorkboardSettings>
+            </CorkboardAndOutliner>
         </BinderItem>
-        <BinderItem UUID="915745DD-9647-4CE0-B9FC-A870C9929AE5" Type="DraftFolder" Created="2007-03-26 03:41:05 +0300" Modified="2007-03-28 00:40:22 +0300">
+        <BinderItem ID="0" UUID="915745DD-9647-4CE0-B9FC-A870C9929AE5" Created="2007-03-26 03:41:05 +0300" Modified="2007-03-28 00:40:22 +0300" Type="DraftFolder">
             <Title>Screenplay</Title>
             <MetaData>
-                <SectionType>ACC71E02-88B2-4559-B9B8-126B8FD5DCBE</SectionType>
+                <PageBreakBefore>Yes</PageBreakBefore>
             </MetaData>
+            <CorkboardAndOutliner>
+                <CorkboardSettings>
+                    <FreeformMode>Yes</FreeformMode>
+                </CorkboardSettings>
+            </CorkboardAndOutliner>
             <Children>
-                <BinderItem UUID="DF214A86-88B5-41E4-BEEF-5F919903A937" Type="Folder" Created="2021-12-31 03:22:08 +0300" Modified="2022-01-14 01:06:39 +0300">
+                <BinderItem ID="33" UUID="DF214A86-88B5-41E4-BEEF-5F919903A937" Created="2021-12-31 03:22:08 +0300" Modified="2022-01-14 01:06:39 +0300" Type="Folder">
                     <Title>Скрипт</Title>
                     <MetaData>
                         <IncludeInCompile>Yes</IncludeInCompile>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>0,0</TextSelection>
+                        <Target Type="Words">0</Target>
                     </TextSettings>
                     <Children>
-                        <BinderItem UUID="81E7247A-99FA-4D41-BC22-9BE9DC060DC8" Type="Text" Created="2021-12-31 03:22:08 +0300" Modified="2022-01-22 20:50:12 +0300">
+                        <BinderItem ID="34" UUID="81E7247A-99FA-4D41-BC22-9BE9DC060DC8" Created="2021-12-31 03:22:08 +0300" Modified="2021-12-31 03:22:08 +0300" Type="Text">
                             <Title>Вступление </Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
@@ -34,10 +45,11 @@
                             </MetaData>
                             <TextSettings>
                                 <TextMode>Script</TextMode>
-                                <TextSelection>0,0</TextSelection>
+                                <TextSelection>623,0</TextSelection>
+                                <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem UUID="F59367E8-0FCD-4F93-B36C-2D7C2DAFACCE" Type="Text" Created="2022-01-19 02:37:04 +0300" Modified="2022-01-19 02:53:26 +0300">
+                        <BinderItem ID="50" UUID="F59367E8-0FCD-4F93-B36C-2D7C2DAFACCE" Created="2022-01-19 02:37:04 +0300" Modified="2022-01-19 02:53:26 +0300" Type="Text">
                             <Title>Звонок</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
@@ -46,19 +58,21 @@
                             <TextSettings>
                                 <TextMode>Script</TextMode>
                                 <TextSelection>699,0</TextSelection>
+                                <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem UUID="0EC7BB3E-BDD2-4488-8ED1-7EFCA5B0B407" Type="Text" Created="2021-12-31 03:22:08 +0300" Modified="2022-01-22 20:50:30 +0300">
+                        <BinderItem ID="35" UUID="0EC7BB3E-BDD2-4488-8ED1-7EFCA5B0B407" Created="2021-12-31 03:22:08 +0300" Modified="2022-01-14 01:10:16 +0300" Type="Text">
                             <Title>Встреча</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                             </MetaData>
                             <TextSettings>
                                 <TextMode>Script</TextMode>
-                                <TextSelection>0,0</TextSelection>
+                                <TextSelection>89,0</TextSelection>
+                                <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem UUID="CC83CFE8-9C24-4787-94AC-9A16919FD7A2" Type="Text" Created="2022-01-14 01:15:57 +0300" Modified="2022-01-16 00:42:56 +0300">
+                        <BinderItem ID="47" UUID="CC83CFE8-9C24-4787-94AC-9A16919FD7A2" Created="2022-01-14 01:15:57 +0300" Modified="2022-01-16 00:42:56 +0300" Type="Text">
                             <Title>Сигарета</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
@@ -66,9 +80,10 @@
                             <TextSettings>
                                 <TextMode>Script</TextMode>
                                 <TextSelection>824,53</TextSelection>
+                                <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem UUID="A7482EBF-0049-499C-AD73-225FB4A6E217" Type="Text" Created="2022-01-14 01:26:06 +0300" Modified="2022-01-22 20:50:36 +0300">
+                        <BinderItem ID="48" UUID="A7482EBF-0049-499C-AD73-225FB4A6E217" Created="2022-01-14 01:26:06 +0300" Modified="2022-01-14 01:30:27 +0300" Type="Text">
                             <Title>Поход</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
@@ -76,20 +91,22 @@
                             </MetaData>
                             <TextSettings>
                                 <TextMode>Script</TextMode>
-                                <TextSelection>0,0</TextSelection>
+                                <TextSelection>5,0</TextSelection>
+                                <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem UUID="2DB71E95-9A37-4110-AD7A-CC47D2A1BC73" Type="Text" Created="2021-12-31 03:22:08 +0300" Modified="2022-01-22 20:51:23 +0300">
+                        <BinderItem ID="36" UUID="2DB71E95-9A37-4110-AD7A-CC47D2A1BC73" Created="2021-12-31 03:22:08 +0300" Modified="2022-01-14 01:05:48 +0300" Type="Text">
                             <Title>Отчаяние</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                             </MetaData>
                             <TextSettings>
                                 <TextMode>Script</TextMode>
-                                <TextSelection>0,0</TextSelection>
+                                <TextSelection>165,0</TextSelection>
+                                <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem UUID="3B6D8814-C76A-493C-8DF6-A18349816321" Type="Text" Created="2021-12-31 03:22:08 +0300" Modified="2022-01-19 02:38:43 +0300">
+                        <BinderItem ID="37" UUID="3B6D8814-C76A-493C-8DF6-A18349816321" Created="2021-12-31 03:22:08 +0300" Modified="2022-01-19 02:38:43 +0300" Type="Text">
                             <Title>Звонок</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
@@ -98,9 +115,10 @@
                             <TextSettings>
                                 <TextMode>Script</TextMode>
                                 <TextSelection>6,0</TextSelection>
+                                <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem UUID="DF94EE22-50A6-4DD0-A8A1-12C04D7346AB" Type="Text" Created="2022-01-14 01:26:19 +0300" Modified="2022-01-19 02:33:41 +0300">
+                        <BinderItem ID="49" UUID="DF94EE22-50A6-4DD0-A8A1-12C04D7346AB" Created="2022-01-14 01:26:19 +0300" Modified="2022-01-19 02:33:41 +0300" Type="Text">
                             <Title>Смысл</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
@@ -108,10 +126,11 @@
                             </MetaData>
                             <TextSettings>
                                 <TextMode>Script</TextMode>
-                                <TextSelection>39,0</TextSelection>
+                                <TextSelection>396,5</TextSelection>
+                                <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem UUID="DAA2EE71-37BE-4A90-863E-DA41E524FBC4" Type="Text" Created="2022-01-19 02:54:35 +0300" Modified="2022-01-19 03:25:39 +0300">
+                        <BinderItem ID="51" UUID="DAA2EE71-37BE-4A90-863E-DA41E524FBC4" Created="2022-01-19 02:54:35 +0300" Modified="2022-01-19 03:25:39 +0300" Type="Text">
                             <Title>Наследие</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
@@ -120,9 +139,10 @@
                             <TextSettings>
                                 <TextMode>Script</TextMode>
                                 <TextSelection>81,0</TextSelection>
+                                <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem UUID="70B0C147-ECF5-4984-9765-730EDDBC1EF0" Type="Text" Created="2022-01-19 02:55:31 +0300" Modified="2022-01-19 03:26:21 +0300">
+                        <BinderItem ID="52" UUID="70B0C147-ECF5-4984-9765-730EDDBC1EF0" Created="2022-01-19 02:55:31 +0300" Modified="2022-01-19 03:26:21 +0300" Type="Text">
                             <Title>Сон</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
@@ -131,124 +151,104 @@
                             <TextSettings>
                                 <TextMode>Script</TextMode>
                                 <TextSelection>583,0</TextSelection>
+                                <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem UUID="2A6E5F63-CAA7-460B-A3EA-28C615F4FBB3" Type="Text" Created="2021-12-31 03:22:08 +0300" Modified="2022-01-15 23:51:34 +0300">
+                        <BinderItem ID="38" UUID="2A6E5F63-CAA7-460B-A3EA-28C615F4FBB3" Created="2021-12-31 03:22:08 +0300" Modified="2022-01-15 23:51:34 +0300" Type="Text">
                             <Title>Структура</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                             </MetaData>
                             <TextSettings>
                                 <TextMode>Script</TextMode>
-                                <TextSelection Caret="276">270,6</TextSelection>
+                                <TextSelection>441,0</TextSelection>
+                                <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
                     </Children>
                 </BinderItem>
             </Children>
         </BinderItem>
-        <BinderItem UUID="3EFF72C1-CD4D-4BD7-BF67-FF3A5F308E31" Type="Folder" Created="2013-02-26 17:40:04 +0300" Modified="2022-01-12 01:57:54 +0300">
+        <BinderItem ID="22" UUID="3EFF72C1-CD4D-4BD7-BF67-FF3A5F308E31" Created="2013-02-26 17:40:04 +0300" Modified="2022-01-12 01:57:54 +0300" Type="Folder">
             <Title>Front Matter</Title>
             <MetaData>
                 <IncludeInCompile>Yes</IncludeInCompile>
                 <IconFileName>Front Matter.tiff</IconFileName>
             </MetaData>
             <TextSettings>
-                <TextSelection>0,0</TextSelection>
+                <Target Type="Words">0</Target>
             </TextSettings>
+            <CorkboardAndOutliner>
+                <CorkboardSettings>
+                    <FreeformMode>Yes</FreeformMode>
+                </CorkboardSettings>
+            </CorkboardAndOutliner>
             <Children>
-                <BinderItem UUID="8D8AEC65-4720-4037-A328-314EA604CD6F" Type="Text" Created="2016-06-28 10:07:32 +0300" Modified="2022-01-12 00:32:57 +0300">
+                <BinderItem ID="23" UUID="8D8AEC65-4720-4037-A328-314EA604CD6F" Created="2016-06-28 10:07:32 +0300" Modified="2022-01-12 00:32:57 +0300" Type="Text">
                     <Title>Title Page</Title>
                     <MetaData>
                         <IncludeInCompile>Yes</IncludeInCompile>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>0,0</TextSelection>
+                        <TextSelection>45,0</TextSelection>
+                        <Target Type="Words">0</Target>
                     </TextSettings>
                 </BinderItem>
             </Children>
         </BinderItem>
-        <BinderItem UUID="8F7756A0-B611-4941-B6DB-BBDA4FD1B11D" Type="Folder" Created="2010-10-19 15:06:35 +0300" Modified="2022-01-12 01:57:54 +0300">
+        <BinderItem ID="18" UUID="8F7756A0-B611-4941-B6DB-BBDA4FD1B11D" Created="2010-10-19 15:06:35 +0300" Modified="2022-01-12 01:57:54 +0300" Type="Folder">
             <Title>Characters</Title>
             <MetaData>
                 <IncludeInCompile>Yes</IncludeInCompile>
                 <IconFileName>Characters (Photo).tiff</IconFileName>
             </MetaData>
             <TextSettings>
-                <TextSelection>0,0</TextSelection>
+                <Target Type="Words">0</Target>
             </TextSettings>
+            <CorkboardAndOutliner>
+                <CorkboardSettings>
+                    <FreeformMode>Yes</FreeformMode>
+                </CorkboardSettings>
+            </CorkboardAndOutliner>
             <Children>
-                <BinderItem UUID="6CA9E06A-1D7C-4B71-8400-BCE7224259D0" Type="Text" Created="2022-01-12 00:30:56 +0300" Modified="2022-01-22 21:05:56 +0300">
+                <BinderItem ID="39" UUID="6CA9E06A-1D7C-4B71-8400-BCE7224259D0" Created="2022-01-12 00:30:56 +0300" Modified="2022-01-12 00:32:18 +0300" Type="Text">
                     <Title>Арсен</Title>
-                    <MetaData/>
-                    <TextSettings>
-                        <TextSelection>174,0</TextSelection>
-                    </TextSettings>
-                </BinderItem>
-                <BinderItem UUID="82C1217C-DF92-4CD8-8858-2EA471A11F66" Type="Text" Created="2022-01-22 20:51:02 +0300" Modified="2022-01-22 20:53:06 +0300">
-                    <Title>Алан</Title>
                     <MetaData>
                         <IncludeInCompile>Yes</IncludeInCompile>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>4,0</TextSelection>
-                    </TextSettings>
-                </BinderItem>
-                <BinderItem UUID="DB0458B0-193C-4673-AE09-FE5D8E4D179E" Type="Text" Created="2022-01-22 20:51:08 +0300" Modified="2022-01-22 20:51:10 +0300">
-                    <Title>Саргаев</Title>
-                    <MetaData>
-                        <IncludeInCompile>Yes</IncludeInCompile>
-                    </MetaData>
-                    <TextSettings>
-                        <TextSelection>0,0</TextSelection>
-                    </TextSettings>
-                </BinderItem>
-                <BinderItem UUID="B5B486FA-0DE2-4180-B2E1-624DC0CB3CD1" Type="Text" Created="2022-01-22 20:51:13 +0300" Modified="2022-01-22 20:51:20 +0300">
-                    <Title>Максим</Title>
-                    <MetaData>
-                        <IncludeInCompile>Yes</IncludeInCompile>
-                    </MetaData>
-                    <TextSettings>
-                        <TextSelection>0,0</TextSelection>
-                    </TextSettings>
-                </BinderItem>
-                <BinderItem UUID="47EAF508-7B7B-4665-9D64-76E55CA143AA" Type="Text" Created="2022-01-22 20:52:19 +0300" Modified="2022-01-22 20:52:20 +0300">
-                    <Title>Саня</Title>
-                    <MetaData>
-                        <IncludeInCompile>Yes</IncludeInCompile>
-                    </MetaData>
-                    <TextSettings>
-                        <TextSelection>0,0</TextSelection>
-                    </TextSettings>
-                </BinderItem>
-                <BinderItem UUID="C8C6868E-4BBC-4C53-83DB-8594058D21AF" Type="Text" Created="2022-01-22 20:52:33 +0300" Modified="2022-01-22 20:52:34 +0300">
-                    <Title>Ваня</Title>
-                    <MetaData>
-                        <IncludeInCompile>Yes</IncludeInCompile>
-                    </MetaData>
-                    <TextSettings>
-                        <TextSelection>0,0</TextSelection>
+                        <Target Type="Words">0</Target>
                     </TextSettings>
                 </BinderItem>
             </Children>
         </BinderItem>
-        <BinderItem UUID="1AAF6DF7-D218-4922-88D6-CCFBFF37CF0B" Type="Folder" Created="2010-10-19 15:06:37 +0300" Modified="2010-10-19 15:06:56 +0300">
+        <BinderItem ID="17" UUID="1AAF6DF7-D218-4922-88D6-CCFBFF37CF0B" Created="2010-10-19 15:06:37 +0300" Modified="2010-10-19 15:06:56 +0300" Type="Folder">
             <Title>Places</Title>
             <MetaData>
                 <IncludeInCompile>Yes</IncludeInCompile>
                 <IconFileName>Locations (Map).tiff</IconFileName>
             </MetaData>
             <TextSettings>
-                <TextSelection>0,0</TextSelection>
+                <Target Type="Words">0</Target>
             </TextSettings>
+            <CorkboardAndOutliner>
+                <CorkboardSettings>
+                    <FreeformMode>Yes</FreeformMode>
+                </CorkboardSettings>
+            </CorkboardAndOutliner>
         </BinderItem>
-        <BinderItem UUID="3D233E84-3536-465D-9D00-BEEBFE7D1079" Type="ResearchFolder" Created="2007-03-26 03:41:05 +0300" Modified="2007-03-26 03:41:05 +0300">
+        <BinderItem ID="1" UUID="3D233E84-3536-465D-9D00-BEEBFE7D1079" Created="2007-03-26 03:41:05 +0300" Modified="2007-03-26 03:41:05 +0300" Type="ResearchFolder">
             <Title>Research</Title>
             <MetaData>
-                <SectionType>ACC71E02-88B2-4559-B9B8-126B8FD5DCBE</SectionType>
+                <PageBreakBefore>Yes</PageBreakBefore>
             </MetaData>
+            <CorkboardAndOutliner>
+                <CorkboardSettings>
+                    <FreeformMode>Yes</FreeformMode>
+                </CorkboardSettings>
+            </CorkboardAndOutliner>
             <Children>
-                <BinderItem UUID="8F819863-A802-4DDD-9A28-38F865CFA1BF" Type="PDF" Created="2016-06-28 10:17:57 +0300" Modified="2016-06-28 10:18:53 +0300">
+                <BinderItem ID="26" UUID="8F819863-A802-4DDD-9A28-38F865CFA1BF" Created="2016-06-28 10:17:57 +0300" Modified="2016-06-28 10:18:53 +0300" Type="PDF">
                     <Title>Sample Script</Title>
                     <MetaData>
                         <IncludeInCompile>Yes</IncludeInCompile>
@@ -260,16 +260,21 @@
                 </BinderItem>
             </Children>
         </BinderItem>
-        <BinderItem UUID="CD90B5BD-8422-466D-99AD-E513F73A86FB" Type="Folder" Created="2010-10-19 15:57:18 +0300" Modified="2014-06-12 09:00:55 +0300">
+        <BinderItem ID="14" UUID="CD90B5BD-8422-466D-99AD-E513F73A86FB" Created="2010-10-19 15:57:18 +0300" Modified="2014-06-12 09:00:55 +0300" Type="Folder">
             <Title>Template Sheets</Title>
             <MetaData>
                 <IncludeInCompile>Yes</IncludeInCompile>
             </MetaData>
             <TextSettings>
-                <TextSelection>0,0</TextSelection>
+                <Target Type="Words">0</Target>
             </TextSettings>
+            <CorkboardAndOutliner>
+                <CorkboardSettings>
+                    <FreeformMode>Yes</FreeformMode>
+                </CorkboardSettings>
+            </CorkboardAndOutliner>
             <Children>
-                <BinderItem UUID="1E2ECFA2-8A29-4DEE-AC21-4AA02E83E8B2" Type="Text" Created="2016-06-28 10:20:24 +0300" Modified="2016-07-11 16:40:29 +0300">
+                <BinderItem ID="28" UUID="1E2ECFA2-8A29-4DEE-AC21-4AA02E83E8B2" Created="2016-06-28 10:20:24 +0300" Modified="2016-07-11 16:40:29 +0300" Type="Text">
                     <Title>Character Sketch</Title>
                     <MetaData>
                         <LabelID>0</LabelID>
@@ -281,9 +286,10 @@
                     </MetaData>
                     <TextSettings>
                         <TextSelection>32,0</TextSelection>
+                        <Target Type="Words">0</Target>
                     </TextSettings>
                 </BinderItem>
-                <BinderItem UUID="7F5DCFE9-9802-42A4-9833-997D0E643EAB" Type="Text" Created="2016-06-28 10:20:24 +0300" Modified="2016-07-11 16:40:34 +0300">
+                <BinderItem ID="27" UUID="7F5DCFE9-9802-42A4-9833-997D0E643EAB" Created="2016-06-28 10:20:24 +0300" Modified="2016-07-11 16:40:34 +0300" Type="Text">
                     <Title>Setting Sketch</Title>
                     <MetaData>
                         <IncludeInCompile>Yes</IncludeInCompile>
@@ -292,26 +298,37 @@
                     </MetaData>
                     <TextSettings>
                         <TextSelection>33,0</TextSelection>
+                        <Target Type="Words">0</Target>
                     </TextSettings>
                 </BinderItem>
             </Children>
         </BinderItem>
-        <BinderItem UUID="88E66AF9-1956-4920-B626-CC2C0B23B6EF" Type="TrashFolder" Created="2007-03-26 03:41:05 +0300" Modified="2007-03-26 03:41:05 +0300">
+        <BinderItem ID="2" UUID="88E66AF9-1956-4920-B626-CC2C0B23B6EF" Created="2007-03-26 03:41:05 +0300" Modified="2007-03-26 03:41:05 +0300" Type="TrashFolder">
             <Title>Trash</Title>
             <MetaData>
-                <SectionType>ACC71E02-88B2-4559-B9B8-126B8FD5DCBE</SectionType>
+                <PageBreakBefore>Yes</PageBreakBefore>
             </MetaData>
+            <CorkboardAndOutliner>
+                <CorkboardSettings>
+                    <FreeformMode>Yes</FreeformMode>
+                </CorkboardSettings>
+            </CorkboardAndOutliner>
             <Children>
-                <BinderItem UUID="42A9D144-2FD3-45F9-9E36-B7199B8B7B2C" Type="Folder" Created="2010-10-26 17:37:05 +0300" Modified="2022-01-12 01:57:54 +0300">
+                <BinderItem ID="19" UUID="42A9D144-2FD3-45F9-9E36-B7199B8B7B2C" Created="2010-10-26 17:37:05 +0300" Modified="2022-01-12 01:57:54 +0300" Type="Folder">
                     <Title>Старый Скрипт</Title>
                     <MetaData>
                         <IncludeInCompile>Yes</IncludeInCompile>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>0,0</TextSelection>
+                        <Target Type="Words">0</Target>
                     </TextSettings>
+                    <CorkboardAndOutliner>
+                        <CorkboardSettings>
+                            <FreeformMode>Yes</FreeformMode>
+                        </CorkboardSettings>
+                    </CorkboardAndOutliner>
                     <Children>
-                        <BinderItem UUID="C29CEC09-3AA6-4B61-B21F-40DDFAA2F6A8" Type="Text" Created="2007-03-26 03:41:05 +0300" Modified="2021-01-28 17:35:38 +0300">
+                        <BinderItem ID="3" UUID="C29CEC09-3AA6-4B61-B21F-40DDFAA2F6A8" Created="2007-03-26 03:41:05 +0300" Modified="2021-01-28 17:35:38 +0300" Type="Text">
                             <Title>Вступление </Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
@@ -320,9 +337,15 @@
                             <TextSettings>
                                 <TextMode>Script</TextMode>
                                 <TextSelection>111,0</TextSelection>
+                                <Target Type="Words">0</Target>
                             </TextSettings>
+                            <CorkboardAndOutliner>
+                                <CorkboardSettings>
+                                    <FreeformMode>Yes</FreeformMode>
+                                </CorkboardSettings>
+                            </CorkboardAndOutliner>
                         </BinderItem>
-                        <BinderItem UUID="14EB028E-E90B-45A0-B180-ACB2CE939173" Type="Text" Created="2021-01-28 16:18:39 +0300" Modified="2021-02-07 17:36:26 +0300">
+                        <BinderItem ID="29" UUID="14EB028E-E90B-45A0-B180-ACB2CE939173" Created="2021-01-28 16:18:39 +0300" Modified="2021-02-07 17:36:26 +0300" Type="Text">
                             <Title>Сцена в бане</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
@@ -330,9 +353,10 @@
                             <TextSettings>
                                 <TextMode>Script</TextMode>
                                 <TextSelection>429,0</TextSelection>
+                                <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem UUID="5A930E45-9BAE-4925-B629-A620D2A21A17" Type="Text" Created="2021-01-28 16:18:42 +0300" Modified="2021-02-12 10:56:52 +0300">
+                        <BinderItem ID="30" UUID="5A930E45-9BAE-4925-B629-A620D2A21A17" Created="2021-01-28 16:18:42 +0300" Modified="2021-02-12 10:56:52 +0300" Type="Text">
                             <Title>Вне подозрений</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
@@ -340,9 +364,10 @@
                             <TextSettings>
                                 <TextMode>Script</TextMode>
                                 <TextSelection>2698,0</TextSelection>
+                                <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem UUID="62429F79-C7DC-442E-AA4C-D4061ACCA23B" Type="Text" Created="2021-01-28 16:18:43 +0300" Modified="2022-01-22 20:46:25 +0300">
+                        <BinderItem ID="31" UUID="62429F79-C7DC-442E-AA4C-D4061ACCA23B" Created="2021-01-28 16:18:43 +0300" Modified="2021-03-25 18:40:00 +0300" Type="Text">
                             <Title>В Беспамятстве</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
@@ -350,30 +375,31 @@
                             <TextSettings>
                                 <TextMode>Script</TextMode>
                                 <TextSelection>117,0</TextSelection>
+                                <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem UUID="C8FFAF27-8DCD-4F4C-86D8-96E3A32CF3B3" Type="Text" Created="2021-01-28 16:18:45 +0300" Modified="2021-02-11 19:30:37 +0300">
+                        <BinderItem ID="32" UUID="C8FFAF27-8DCD-4F4C-86D8-96E3A32CF3B3" Created="2021-01-28 16:18:45 +0300" Modified="2021-02-11 19:30:37 +0300" Type="Text">
                             <Title>Scene-4</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                             </MetaData>
                             <TextSettings>
                                 <TextMode>Script</TextMode>
-                                <TextSelection>0,0</TextSelection>
+                                <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
                     </Children>
                 </BinderItem>
-                <BinderItem UUID="F28939CB-16C8-4025-AAC3-59158BFEF61F" Type="Folder" Created="2022-01-14 01:06:08 +0300" Modified="2022-01-14 01:06:22 +0300">
+                <BinderItem ID="40" UUID="F28939CB-16C8-4025-AAC3-59158BFEF61F" Created="2022-01-14 01:06:08 +0300" Modified="2022-01-14 01:06:22 +0300" Type="Folder">
                     <Title>Мусор</Title>
                     <MetaData>
                         <IncludeInCompile>Yes</IncludeInCompile>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>0,0</TextSelection>
+                        <Target Type="Words">0</Target>
                     </TextSettings>
                     <Children>
-                        <BinderItem UUID="6BBAB646-836E-4F28-8833-64180BBA9C70" Type="Text" Created="2022-01-14 01:06:08 +0300" Modified="2022-01-14 01:06:08 +0300">
+                        <BinderItem ID="41" UUID="6BBAB646-836E-4F28-8833-64180BBA9C70" Created="2022-01-14 01:06:08 +0300" Modified="2022-01-14 01:06:08 +0300" Type="Text">
                             <Title>Вступление </Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
@@ -381,30 +407,30 @@
                             </MetaData>
                             <TextSettings>
                                 <TextMode>Script</TextMode>
-                                <TextSelection>0,0</TextSelection>
+                                <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem UUID="6336680E-016A-4434-AC36-25C53FE8B832" Type="Text" Created="2022-01-14 01:06:08 +0300" Modified="2022-01-14 01:06:08 +0300">
+                        <BinderItem ID="42" UUID="6336680E-016A-4434-AC36-25C53FE8B832" Created="2022-01-14 01:06:08 +0300" Modified="2022-01-14 01:06:08 +0300" Type="Text">
                             <Title>Сцена в бане</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                             </MetaData>
                             <TextSettings>
                                 <TextMode>Script</TextMode>
-                                <TextSelection>0,0</TextSelection>
+                                <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem UUID="190F7D5B-B00F-4636-9571-8D00AC9D7EFF" Type="Text" Created="2022-01-14 01:06:08 +0300" Modified="2022-01-14 01:06:08 +0300">
+                        <BinderItem ID="43" UUID="190F7D5B-B00F-4636-9571-8D00AC9D7EFF" Created="2022-01-14 01:06:08 +0300" Modified="2022-01-14 01:06:08 +0300" Type="Text">
                             <Title>Отчаяние</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                             </MetaData>
                             <TextSettings>
                                 <TextMode>Script</TextMode>
-                                <TextSelection>0,0</TextSelection>
+                                <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem UUID="FAE86C48-7FD7-437D-9777-6ED2FAEFA731" Type="Text" Created="2022-01-14 01:06:08 +0300" Modified="2022-01-14 01:06:08 +0300">
+                        <BinderItem ID="44" UUID="FAE86C48-7FD7-437D-9777-6ED2FAEFA731" Created="2022-01-14 01:06:08 +0300" Modified="2022-01-14 01:06:08 +0300" Type="Text">
                             <Title>Телефонный звонок</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
@@ -412,67 +438,34 @@
                             </MetaData>
                             <TextSettings>
                                 <TextMode>Script</TextMode>
-                                <TextSelection>0,0</TextSelection>
+                                <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem UUID="8464CEA6-66A1-44A5-9BFA-5322D39BB0F8" Type="Text" Created="2022-01-14 01:06:08 +0300" Modified="2022-01-14 01:06:08 +0300">
+                        <BinderItem ID="45" UUID="8464CEA6-66A1-44A5-9BFA-5322D39BB0F8" Created="2022-01-14 01:06:08 +0300" Modified="2022-01-14 01:06:08 +0300" Type="Text">
                             <Title>Scene-4</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                             </MetaData>
                             <TextSettings>
                                 <TextMode>Script</TextMode>
-                                <TextSelection>0,0</TextSelection>
+                                <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
                     </Children>
                 </BinderItem>
-                <BinderItem UUID="B890EC91-BCF5-4BA0-AD09-E67C57548B5B" Type="Text" Created="2022-01-14 01:12:31 +0300" Modified="2022-01-14 01:15:17 +0300">
+                <BinderItem ID="46" UUID="B890EC91-BCF5-4BA0-AD09-E67C57548B5B" Created="2022-01-14 01:12:31 +0300" Modified="2022-01-14 01:15:17 +0300" Type="Text">
                     <Title>Сигарета</Title>
                     <MetaData>
                         <IncludeInCompile>Yes</IncludeInCompile>
                     </MetaData>
                     <TextSettings>
                         <TextSelection>14,0</TextSelection>
+                        <Target Type="Words">0</Target>
                     </TextSettings>
                 </BinderItem>
             </Children>
         </BinderItem>
     </Binder>
-    <Collections>
-        <Collection Type="Binder" ID="6AE1732B-8E66-4B56-B7E2-C7B1462B31DB" Color="0.941176 0.937255 0.956863">
-            <Title>Binder</Title>
-        </Collection>
-        <Collection Type="RecentSearch" ID="68DB4E73-0B33-4FEE-9600-053ED547B6DC" Color="0.901961 0.901961 0.980392">
-            <Title>Результаты поиска</Title>
-            <SearchSettings Operator="Exact" Type="Keywords" Scope="All" CompileSetting="All" CaseSensitive="No" IgnoreDiacritics="No">Арсен</SearchSettings>
-        </Collection>
-    </Collections>
-    <Keywords>
-        <Keyword ID="1">
-            <Title>Тест</Title>
-            <Color>0.431373 0.996078 0.149020</Color>
-        </Keyword>
-    </Keywords>
-    <SectionTypes>
-        <TypeDefinitions>
-            <Type ID="7C61C71D-E8EC-4A3D-A589-512B33A441CD">Heading</Type>
-            <Type ID="8F9F9FBA-334F-4A53-9BAE-BAEFCBCA2F4E">Sub-Heading</Type>
-            <Type ID="AF6974FB-E25D-47E5-90CE-1913237A04B1">Section</Type>
-            <Type ID="ACC71E02-88B2-4559-B9B8-126B8FD5DCBE">Section Start</Type>
-        </TypeDefinitions>
-        <LevelTypes>
-            <Folders>
-                <Type>7C61C71D-E8EC-4A3D-A589-512B33A441CD</Type>
-            </Folders>
-            <Containers>
-                <Type>AF6974FB-E25D-47E5-90CE-1913237A04B1</Type>
-            </Containers>
-            <Files>
-                <Type>AF6974FB-E25D-47E5-90CE-1913237A04B1</Type>
-            </Files>
-        </LevelTypes>
-    </SectionTypes>
     <LabelSettings>
         <Title>Label</Title>
         <DefaultLabelID>-1</DefaultLabelID>
@@ -495,17 +488,26 @@
             <Status ID="5">Done</Status>
         </StatusItems>
     </StatusSettings>
-    <ProjectTargets Notify="No">
-        <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="Yes" Deadline="2011-04-21 11:44:59 +0100" IgnoreDeadline="Yes">0</DraftTarget>
-        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="No" ResetType="Time" ResetTime="00:00" DeterminedFromDeadline="No" CanWriteOnDeadlineDate="No" WritingDays="">0</SessionTarget>
-        <PreviousSession Words="299" Characters="1628" Date="2022-01-22 21:05:57 +0300"/>
-    </ProjectTargets>
     <TemplateFolderUUID>CD90B5BD-8422-466D-99AD-E513F73A86FB</TemplateFolderUUID>
-    <RecentWritingHistory Date="2022-01-22 00:00:00 +0300">
-        <DraftWordCount>0</DraftWordCount>
-        <DraftCharCount>0</DraftCharCount>
-        <OtherWordCount>25</OtherWordCount>
-        <OtherCharCount>178</OtherCharCount>
-    </RecentWritingHistory>
-    <PrintSettings LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="Letter" Orientation="Portrait" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="No" PagesAcross="1" PagesDown="1"/>
+    <ProjectTargets>
+        <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="Yes" Deadline="2011-04-21 11:44:59 +0100" IgnoreDeadline="Yes">0</DraftTarget>
+        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="No" ResetType="Midnight" DeterminedFromDeadline="No" CanWriteOnDeadlineDate="No" WritingDays="">0</SessionTarget>
+        <PreviousSession Words="299" Characters="1628" Date="2022-01-19 01:56:39 +0300"/>
+    </ProjectTargets>
+    <Collections>
+        <Collection Type="Binder" ID="6AE1732B-8E66-4B56-B7E2-C7B1462B31DB" Color="0.901961 0.917647 0.933333">
+            <Title>Binder</Title>
+        </Collection>
+        <Collection Type="RecentSearch" ID="68DB4E73-0B33-4FEE-9600-053ED547B6DC" Color="0.901961 0.901961 0.980392">
+            <Title>Результаты поиска</Title>
+            <SearchSettings Operator="Exact" Type="Keywords" Scope="All" CompileSetting="All" CaseSensitive="No">Арсен</SearchSettings>
+        </Collection>
+    </Collections>
+    <Keywords>
+        <Keyword ID="1">
+            <Title>Тест</Title>
+            <Color>0.431373 0.996078 0.149020</Color>
+        </Keyword>
+    </Keywords>
+    <PrintSettings PaperType="Letter" LeftMargin="72.0001" RightMargin="72.0001" TopMargin="90.0002" BottomMargin="90.0002" Orientation="Portrait" Collates="No" ReverseOrder="No"/>
 </ScrivenerProject>
