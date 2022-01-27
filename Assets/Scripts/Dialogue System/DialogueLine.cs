@@ -4,14 +4,16 @@ using UnityEngine;
 
 
 
-[CreateAssetMenu(menuName ="Dialogue")]
-public class Dialogue : ScriptableObject
+[CreateAssetMenu(menuName ="Dialogue Line")]
+public class DialogueLine : ScriptableObject
 {
-    [TextArea(1, 1)] [SerializeField] string CharacterName;
-    [TextArea(10, 14)] [SerializeField] string DialogueText;
+    [TextArea(1, 1)] [SerializeField] public string CharacterName;
+    [TextArea(10, 14)] [SerializeField] public string DialogueText;
     [SerializeField] AudioClip SoundEffect;
     [SerializeField] AudioClip CharacterVoice;
-    [SerializeField] Dialogue[] nextDialogue;
+    [SerializeField] DialogueLine nextDialogue;
+
+    private int index = 0;
 
     public string GetDialogueName()
         {
@@ -21,9 +23,13 @@ public class Dialogue : ScriptableObject
     {
         return DialogueText;
     }
-    public Dialogue[] GetNextDialogue()
+    public DialogueLine GetNextDialogue()
     {
         return nextDialogue;
+    }
+    public void GetNextLine()
+    {
+        index++;
     }
     public AudioClip GetCharacterVoice()
     {

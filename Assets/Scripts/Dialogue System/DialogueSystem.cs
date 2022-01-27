@@ -16,7 +16,7 @@ public class DialogueSystem : MonoBehaviour
     
     [Space(5f)]
     [Header("Starting Dialogue")]
-    [SerializeField] Dialogue startingDialogue;
+    [SerializeField] DialogueLine startingDialogue;
 
     [Space(5f)]
     [Header("Sound Settings")]
@@ -38,7 +38,7 @@ public class DialogueSystem : MonoBehaviour
     private bool InActionRadius;
     private bool DialogueWindowIsActive;
 
-    private Dialogue Dialogue;
+    private DialogueLine dialogue;
     private bool DialogueIsPlayed = false;
 
 
@@ -50,7 +50,7 @@ public class DialogueSystem : MonoBehaviour
 
     void Start()
     {
-        Dialogue = startingDialogue;
+        dialogue = startingDialogue;
         DialogueVoiceSource = this.GetComponent<AudioSource>();
         if (ActionComponent == null)
         {
@@ -71,7 +71,7 @@ public class DialogueSystem : MonoBehaviour
     private void ManageDialogue()
     {
         
-        ManageDialogueChange();
+        ManageDialogueLineChange();
         
         ManageCharacterVoice();
 
@@ -94,16 +94,16 @@ public class DialogueSystem : MonoBehaviour
             return FinalName;
         }
 
-        private void ManageDialogueChange()
+        private void ManageDialogueLineChange()
     {
-        var nextDialogue = Dialogue.GetNextDialogue();
-        if (InputForDialogueChangeIsPressed(nextDialogue.Length, nextDialogue))
+        DialogueLine nextDialogueLine = dialogue.GetNextDialogue();
+        if (InputForDialogueChangeIsPressed(nextDialogueLine))
             {
-                Dialogue = nextDialogue[0];
+                dialogue = nextDialogueLine;
                 StopVoiceAudioPlaying();
                 DialogueIsPlayed = false;
             }
-        if (InputForDialogueCloseIsPressed(nextDialogue.Length, nextDialogue))
+        if (InputForDialogueCloseIsPressed(nextDialogueLine))
             {
                 DialogueIsOver = true;
                 StopVoiceAudioPlaying();
@@ -115,12 +115,12 @@ public class DialogueSystem : MonoBehaviour
         }   
     void ManageDialogueWindowContent()
         {
-            NameComponent.text = Dialogue.GetDialogueName();
-            CharacterVoice = Dialogue.GetCharacterVoice();
+            NameComponent.text = dialogue.GetDialogueName();
+            CharacterVoice = dialogue.GetCharacterVoice();
             if (DialogueWindowIsActive && !DialogueIsPlayed)
             {
-                NameComponent.text = SetDialogueName(Dialogue.GetDialogueName());
-                PlayDialogue(Dialogue.GetDialogueText());
+                NameComponent.text = SetDialogueName(dialogue.GetDialogueName());
+                PlayDialogue(dialogue.GetDialogueText());
 
             }
         }
@@ -147,19 +147,19 @@ public class DialogueSystem : MonoBehaviour
             }
 
         }
-    bool InputForDialogueChangeIsPressed(int DialogueListLength, Dialogue[] nextDialogue)
+    bool InputForDialogueChangeIsPressed(DialogueLine nextDialogueLine)
     {
-        if (Input.GetKeyDown(KeyCode.E) && DialogueWindowIsActive && DialogueListLength > 0 && !DialogueVertexAnimator.textAnimating)
+        if (Input.GetKeyDown(KeyCode.E) && DialogueWindowIsActive && nextDialogueLine != null && !DialogueVertexAnimator.textAnimating)
         {
                 return true;
             }
 
-        else if (Input.GetKeyDown(KeyCode.Mouse0) && DialogueWindowIsActive && DialogueListLength > 0 && !DialogueVertexAnimator.textAnimating)
+        else if (Input.GetKeyDown(KeyCode.Mouse0) && DialogueWindowIsActive && nextDialogueLine != null && !DialogueVertexAnimator.textAnimating)
         {
                 return true;
             }
 
-        else if (Input.GetKeyDown(KeyCode.Space) && DialogueWindowIsActive && DialogueListLength > 0 && !DialogueVertexAnimator.textAnimating)
+        else if (Input.GetKeyDown(KeyCode.Space) && DialogueWindowIsActive && nextDialogueLine != null && !DialogueVertexAnimator.textAnimating)
         {
                 return true;
             }
@@ -169,17 +169,17 @@ public class DialogueSystem : MonoBehaviour
             }
     }
 
-     bool InputForDialogueCloseIsPressed(int DialogueListLength, Dialogue[] nextDialogue)
+     bool InputForDialogueCloseIsPressed(DialogueLine nextDialogueLine)
      {
-                if (DialogueListLength <= 0 && DialogueWindowIsActive && (Input.GetKeyDown(KeyCode.E)))
+                if (nextDialogueLine == null && DialogueWindowIsActive && (Input.GetKeyDown(KeyCode.E)))
                 {
                     return true;
                 }
-                else if (DialogueListLength <= 0 && DialogueWindowIsActive && (Input.GetKeyDown(KeyCode.Mouse0)))
+                else if (nextDialogueLine == null && DialogueWindowIsActive && (Input.GetKeyDown(KeyCode.Mouse0)))
                 {
                     return true;
                 }
-                else if (DialogueListLength <= 0 && DialogueWindowIsActive && (Input.GetKeyDown(KeyCode.Space)))
+                else if (nextDialogueLine == null && DialogueWindowIsActive && (Input.GetKeyDown(KeyCode.Space)))
                 {
                     return true;
                 }
