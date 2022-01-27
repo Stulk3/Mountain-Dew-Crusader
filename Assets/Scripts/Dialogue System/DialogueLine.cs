@@ -4,11 +4,11 @@ using UnityEngine;
 
 
 
-[CreateAssetMenu(menuName ="Dialogue Line")]
+[CreateAssetMenu(menuName ="Dialogue/Dialogue Line")]
 public class DialogueLine : ScriptableObject
 {
-    [TextArea(1, 1)] [SerializeField] public string CharacterName;
-    [TextArea(10, 14)] [SerializeField] public string DialogueText;
+    [TextArea(1, 1)] [SerializeField] string CharacterName;
+    [TextArea(10, 14)] [SerializeField] string DialogueText;
     [SerializeField] AudioClip SoundEffect;
     [SerializeField] AudioClip CharacterVoice;
     [SerializeField] DialogueLine nextDialogue;
