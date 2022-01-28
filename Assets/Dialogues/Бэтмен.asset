@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: "\u0411\u044D\u0442\u043C\u0435\u043D"
   m_EditorClassIdentifier: 
   FolderName: "\u0411\u0435\u0442\u043C\u0435\u043D"
+  Lines: []
+  LineIndex: 0
