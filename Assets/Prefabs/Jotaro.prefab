@@ -9,16 +9,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4810580549991045732}
+  - component: {fileID: 3103395053588967337}
   - component: {fileID: 4810580549991045733}
   - component: {fileID: 4810580549991045738}
-  - component: {fileID: 4810580549991045739}
   - component: {fileID: 4810580549991045736}
   - component: {fileID: 4810580549991045737}
   - component: {fileID: 4810580549991045742}
   m_Layer: 0
   m_Name: Jotaro
   m_TagString: Player
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2800000, guid: 2cdd0315a50804943a4e21604410a068, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -36,6 +36,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3103395053588967337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4810580549991045743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d71ab2dd6514ee40bf5e3a481da4632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 2
 --- !u!212 &4810580549991045733
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -107,19 +120,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4810580549991045739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4810580549991045743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d71ab2dd6514ee40bf5e3a481da4632, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MovementMultiplier: 2
 --- !u!50 &4810580549991045736
 Rigidbody2D:
   serializedVersion: 4

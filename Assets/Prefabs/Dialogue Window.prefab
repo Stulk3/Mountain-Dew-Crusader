@@ -904,7 +904,7 @@ GameObject:
   m_Layer: 0
   m_Name: Dialogue Window
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2800000, guid: b0b9c1563c5d1e245a5760da2dbb85f1, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0

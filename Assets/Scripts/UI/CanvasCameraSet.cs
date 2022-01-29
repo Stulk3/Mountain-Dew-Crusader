@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainCameraSet : MonoBehaviour
+public class CanvasCameraSet : MonoBehaviour
 {
     private Canvas Canvas;
     private GameObject CameraGameObject;

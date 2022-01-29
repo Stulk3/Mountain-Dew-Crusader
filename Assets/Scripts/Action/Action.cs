@@ -5,9 +5,9 @@ using DialogueSystem;
 using UnityEditor;
 
 
-public class ActionComponent : MonoBehaviour
+public class Action : MonoBehaviour
 {
-    public ActionType Action;
+    public ActionType Type;
     public enum ActionType : int
     {
         Dialogue = 1,
@@ -37,14 +37,13 @@ public class ActionComponent : MonoBehaviour
     bool DialogueIsOver = false;
 
 
-    ///////////////////////////////////////////////////////////////////////////////////////
     private void Awake()
     {
         SetUpActionComponent();
     }
     private void Start()
     {
-        if (Action == ActionType.OnlyDialogue)
+        if (Type == ActionType.OnlyDialogue)
         {
             StartDialogue(Delay);
         }
@@ -52,9 +51,9 @@ public class ActionComponent : MonoBehaviour
     void Update()
     {
 
-        DetermineBoolVariables();
+        UpdateBoolVariables();
 
-        switch (Action)
+        switch (Type)
         {
             case (ActionType.Dialogue):
                 CheckForDialogueBeginning(); break;
@@ -67,7 +66,7 @@ public class ActionComponent : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        switch (Action)
+        switch (Type)
         {
             case (ActionType.Dialogue):
                 DialogueOnTriggerEnter(collision); break;
@@ -80,7 +79,7 @@ public class ActionComponent : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        switch (Action)
+        switch (Type)
         {
             case (ActionType.Dialogue):
                 DialogueOnTriggerExit(collision); break;
@@ -90,7 +89,7 @@ public class ActionComponent : MonoBehaviour
             case (ActionType.OnlyDialogue): break;
         }
     }
-    ///////////////////////////////////////////////////////////////////////////////////////
+
 
     private void DialogueOnTriggerEnter(Collider2D collision)
     {
@@ -116,8 +115,6 @@ public class ActionComponent : MonoBehaviour
             }
         }
     }
-    ///////////////////////////////////////////////////////////////////////////////////////
-   
 
 
     private void SetUpTriggerCollider()
@@ -153,7 +150,7 @@ public class ActionComponent : MonoBehaviour
     void SetUpActionComponent()
     {
         /////// Диалог ///////
-        if (Action == ActionType.Dialogue)
+        if (Type == ActionType.Dialogue)
         {
             SetUpTriggerCollider();
             if (DialogueSystemComponentOnObject())
@@ -163,14 +160,14 @@ public class ActionComponent : MonoBehaviour
         }
 
         /////// Предмет ///////
-        else if (Action == ActionType.Item)
+        else if (Type == ActionType.Item)
         {
             SetUpTriggerCollider();
         }
 
 
         /////// Диалог-Новелла ///////
-        else if (Action == ActionType.OnlyDialogue)
+        else if (Type == ActionType.OnlyDialogue)
         {
             if (DialogueSystemComponentOnObject())
             {
@@ -209,16 +206,13 @@ public class ActionComponent : MonoBehaviour
         return this.GetComponent<DialogueSystem.DialogueSystem>() != null;
     }
 
-    private void DetermineBoolVariables()
+    private void UpdateBoolVariables()
     {
         if (DialogueSystemComponentOnObject())
         {
             DialogueIsOver = DialogueSystem.GetDialogueIsOver();
         }
     }
-
-    ///////////////////////////////////////////////////////////////////////////////////////
-
 
 
     public bool GetInActionRadius()
@@ -242,26 +236,25 @@ public class ActionComponent : MonoBehaviour
     }
 }
 
-    ///////////////////////////////////////////////////////////////////////////////////////
-public class ActionComponentEditor : Editor
+public class ActionEditor : Editor
 {
     public override void OnInspectorGUI()
     {
-        ActionComponent ActionComponent = (ActionComponent)target;
+        Action ActionComponent = (Action)target;
 
 
-        if (ActionComponent.Action == ActionComponent.ActionType.Dialogue)
+        if (ActionComponent.Type == Action.ActionType.Dialogue)
         {
 
         }
 
 
-        else if (ActionComponent.Action == ActionComponent.ActionType.Item)
+        else if (ActionComponent.Type == Action.ActionType.Item)
         {
 
         }
         
-        else if (ActionComponent.Action == ActionComponent.ActionType.OnlyDialogue)
+        else if (ActionComponent.Type == Action.ActionType.OnlyDialogue)
         {
 
         }

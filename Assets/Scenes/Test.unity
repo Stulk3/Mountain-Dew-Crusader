@@ -170,7 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NameComponent: {fileID: 0}
   TextComponent: {fileID: 0}
-  startingDialogue: {fileID: 11400000, guid: 503d772d525fa704eaab223e46abf6ee, type: 2}
+  dialogue: {fileID: 0}
   SoundEffect: {fileID: 0}
   CharacterVoice: {fileID: 0}
   DialogueVoiceSource: {fileID: 0}
@@ -801,7 +801,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NameComponent: {fileID: 1107611911}
   TextComponent: {fileID: 1795730390}
-  startingDialogue: {fileID: 11400000, guid: 503d772d525fa704eaab223e46abf6ee, type: 2}
+  dialogue: {fileID: 11400000, guid: 503d772d525fa704eaab223e46abf6ee, type: 2}
   SoundEffect: {fileID: 0}
   CharacterVoice: {fileID: 0}
   DialogueVoiceSource: {fileID: 0}
@@ -6693,6 +6693,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4810580549991045743, guid: 82c7cd47f81f40b4d88697f2d804873a,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2800000, guid: 2cdd0315a50804943a4e21604410a068, type: 3}
     - target: {fileID: 4810580549991045743, guid: 82c7cd47f81f40b4d88697f2d804873a,
         type: 3}
       propertyPath: m_Name
