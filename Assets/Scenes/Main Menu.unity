@@ -2703,8 +2703,8 @@ GameObject:
   - component: {fileID: 2034407513}
   - component: {fileID: 2034407512}
   - component: {fileID: 2034407511}
-  - component: {fileID: 2034407514}
   - component: {fileID: 2034407515}
+  - component: {fileID: 2034407514}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2790,13 +2790,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3cbccda75c65d847afe0d0b1ac5af7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Random: 0
   AudioClips:
   - {fileID: 8300000, guid: b4ed5674465d22c458b01ded788df133, type: 3}
   - {fileID: 8300000, guid: b039fd9c6d333a84097736c347d16a5d, type: 3}
   - {fileID: 8300000, guid: 2152e11c8eb1ac145801d0e6b01d857a, type: 3}
   - {fileID: 8300000, guid: 07b019c6e1333894ba7c491ec69132b0, type: 3}
-  Source: {fileID: 0}
+  AudioSource: {fileID: 0}
+  RandomInteger: 0
+  RandomFloat: 0
 --- !u!82 &2034407515
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2902,6 +2903,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2611810604202991226, guid: de0caaac13202684ca679512b9324cd9,
         type: 3}
+      propertyPath: m_Name
+      value: Fade Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2611810604202991226, guid: de0caaac13202684ca679512b9324cd9,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -2973,6 +2979,11 @@ PrefabInstance:
     - target: {fileID: 2611810604363138299, guid: de0caaac13202684ca679512b9324cd9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2611810605769340947, guid: de0caaac13202684ca679512b9324cd9,
+        type: 3}
+      propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2761746859294021534, guid: de0caaac13202684ca679512b9324cd9,
