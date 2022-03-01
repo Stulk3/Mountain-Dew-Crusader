@@ -9,11 +9,21 @@ public class SceneChange : MonoBehaviour
     [Header("Fade Duration")]
     [SerializeField] private float FadeInTime = 2.0f; 
     [SerializeField] private float FadeOutTime = 2.0f; 
+    [Header("Fade Delay")]
 
+    [SerializeField] private float FadeInDelay = 0.0f;
+    [SerializeField] private float FadeOutDelay = 0.0f;
     [Header("Fade Image")]
     private GameObject FadeGameObject;
     private Image FadeImage;
 
+    private float FadeImageOpacity = 0f;
+
+    private float FadeInOpacityChangeStep;
+    private float FadeOutOpacityChangeStep;
+
+    private bool FadeInCompleted;
+    private bool FadeOutCompleted;
     public static void LoadNextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -23,42 +33,82 @@ public class SceneChange : MonoBehaviour
     {
         Application.Quit();
     }
-    private void Awake()
-    {
-        CheckForFadeGameObject();
-        CheckForFadeImageComponent();
-        DontDestroyOnLoad(this.gameObject);
-
-
-    }
-
     public void FadeToNextScene()
     {
         StartCoroutine(FadeOut());
     } 
+    private void Awake()
+    {
+        CheckForFadeGameObject();
 
+        CheckForFadeImageComponent();
+
+        CheckForFadeImageOpactity();
+
+        CalculateFadeInOpacityChangeStep();
+        CalculateFadeOutOpacityChangeStep();
+
+        DontDestroyOnLoad(this.gameObject);
+    }
+
+    private void Start() 
+    {
+        StartCoroutine((FadeIn()));
+    }
+
+    private void FixedUpdate() 
+    {
+        
+    }
+   
 
     IEnumerator FadeOut()
     {
-        FadeInTime = FadeInTime - 0.01f;
+        yield return FadeOut();
+    }
+    IEnumerator FadeIn()
+    {
+        yield return new WaitForSeconds(FadeOutDelay);
 
-        yield return new WaitForFixedUpdate();
+        FadeInTime = FadeInTime - 0.01f;
         
-        yield return StartCoroutine(FadeOut());
+        Debug.Log(FadeImageOpacity);
+        
+
+        yield return StartCoroutine(FadeIn());
     }
 
     void CheckForFadeImageComponent()
     {
-        if (FadeGameObject == null)
+        if (FadeImage == null)
         {
-            FadeGameObject = GameObject.Find("Fade");
+            FadeImage = FadeGameObject.GetComponent<Image>();
         } 
     }
-     void CheckForFadeGameObject()
+    void CheckForFadeGameObject()
     {
         if (FadeGameObject == null)
         {
             FadeGameObject = GameObject.Find("Fade");
         } 
+    }
+
+    void CheckForFadeImageOpactity()
+    {
+        FadeImageOpacity = FadeGameObject.GetComponent<Image>().color.a;
+    }
+
+    void DecreaseFadeOpacity()
+    {
+        FadeImage.color = new Color(FadeImage.color.r, FadeImage.color.g, FadeImage.color.b, FadeImage.color.a - FadeInOpacityChangeStep);
+    }
+
+    void CalculateFadeInOpacityChangeStep()
+    {
+        FadeInOpacityChangeStep = FadeInTime/50;
+    }
+    void CalculateFadeOutOpacityChangeStep()
+    {
+        FadeOutOpacityChangeStep = FadeOutTime/50;
     }
 }
