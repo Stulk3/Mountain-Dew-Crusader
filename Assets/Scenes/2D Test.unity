@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.08389055, g: 0.08389055, b: 0.08389055, a: 1}
+  m_IndirectSpecularColor: {r: 0.0047646235, g: 0.0047646235, b: 0.0047646235, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -789,12 +789,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bb6e562ec27de14c8fc1ad5ec5890f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  Type: 1
   TriggerColliderX: 3.2
   TriggerColliderY: 2.5
   Button: {fileID: 254013281}
   DialogueWindow: {fileID: 97468482}
-  DialogueSystem: {fileID: 0}
+  DialogueSystem: {fileID: 91458388}
   Delay: 1
 --- !u!4 &576612555
 Transform:
@@ -1265,7 +1265,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356750913}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.3, y: 0.6, z: 0.1}
+  m_LocalPosition: {x: 5.3, y: 0.6, z: 0.175}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 576612555}

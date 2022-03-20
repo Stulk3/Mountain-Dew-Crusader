@@ -14,7 +14,7 @@ public class DialogueConstruct : ScriptableObject
    [SerializeField] int LineIndex;
    private string FolderIndex;
    private string assetPath;
-    private DialogueLine dialogueLine;
+   private DialogueLine dialogueLine;
 
     public void ConstuctDialogue()
     {
