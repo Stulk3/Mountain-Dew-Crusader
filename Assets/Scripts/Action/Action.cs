@@ -7,6 +7,7 @@ using UnityEditor;
 
 public class Action : MonoBehaviour
 {
+    public bool Hide = false;
     public ActionType Type;
     public enum ActionType : int
     {
@@ -22,7 +23,10 @@ public class Action : MonoBehaviour
 
     [Space(height: 5f)]
     [Header("GameObjects")]
+
+    [ConditionalHide("Hide")]
     [SerializeField] private GameObject Button;
+    [ConditionalHide("Hide")]
     [SerializeField] public GameObject DialogueWindow;
 
     [Space(height: 5f)]
@@ -30,6 +34,7 @@ public class Action : MonoBehaviour
     public DialogueSystem.DialogueSystem DialogueSystem;
 
     [SerializeField] public float Delay = 0;
+    
     
 
     bool DialogueWindowIsActive = false;
@@ -245,7 +250,7 @@ public class ActionEditor : Editor
 
         if (ActionComponent.Type == Action.ActionType.Dialogue)
         {
-            
+            ActionComponent.Delay = EditorGUILayout.DelayedFloatField(ActionComponent.Delay,GUIStyle.none);
         }
 
 
