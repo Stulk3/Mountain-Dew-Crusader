@@ -12,7 +12,7 @@ public class Action : MonoBehaviour
     {
         Dialogue = 1,
         Item = 2,
-        OnlyDialogue = 3
+        VisualNovel = 3
     }
 
     [Space(height: 5f)]
@@ -29,8 +29,8 @@ public class Action : MonoBehaviour
     [Header("Scripts")]
     public DialogueSystem.DialogueSystem DialogueSystem;
 
-    [SerializeField] private float Delay = 0;
-
+    [SerializeField] public float Delay = 0;
+    
 
     bool DialogueWindowIsActive = false;
     bool InActionRadius = false;
@@ -43,9 +43,9 @@ public class Action : MonoBehaviour
     }
     private void Start()
     {
-        if (Type == ActionType.OnlyDialogue)
+        if (Type == ActionType.VisualNovel)
         {
-            StartDialogue(Delay);
+            StartCoroutine(StartDialogue(Delay)) ;
         }
     }
     void Update()
@@ -73,7 +73,7 @@ public class Action : MonoBehaviour
 
             case (ActionType.Item): break;
 
-            case (ActionType.OnlyDialogue): break;
+            case (ActionType.VisualNovel): break;
         }
     }
 
@@ -86,7 +86,7 @@ public class Action : MonoBehaviour
 
             case (ActionType.Item): break;
 
-            case (ActionType.OnlyDialogue): break;
+            case (ActionType.VisualNovel): break;
         }
     }
 
@@ -167,7 +167,7 @@ public class Action : MonoBehaviour
 
 
         /////// Диалог-Новелла ///////
-        else if (Type == ActionType.OnlyDialogue)
+        else if (Type == ActionType.VisualNovel)
         {
             if (DialogueSystemComponentOnObject())
             {
@@ -245,7 +245,7 @@ public class ActionEditor : Editor
 
         if (ActionComponent.Type == Action.ActionType.Dialogue)
         {
-
+            
         }
 
 
@@ -254,9 +254,9 @@ public class ActionEditor : Editor
 
         }
         
-        else if (ActionComponent.Type == Action.ActionType.OnlyDialogue)
+        else if (ActionComponent.Type == Action.ActionType.VisualNovel)
         {
-
+           
         }
     }
     
