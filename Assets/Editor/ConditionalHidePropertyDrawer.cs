@@ -1,6 +1,6 @@
 using UnityEditor;
 using UnityEngine;
-
+using System;
 
 [CustomPropertyDrawer(typeof(ConditionalHideAttribute))]
 public class ConditionalHidePropertyDrawer: PropertyDrawer
@@ -12,10 +12,31 @@ public class ConditionalHidePropertyDrawer: PropertyDrawer
         //Enable/disable the property
         bool enabled = GetConditionalHideAttributeResult(HideAttribute, property);
         bool WasEnabled = GUI.enabled;
+        GUI.enabled = enabled;
 
         if (!HideAttribute.HideInInspector || enabled)
         {
-            EditorGUI.PropertyField(position,property,label,true);
+            if(HideAttribute.range.min == HideAttribute.range.max)
+            {
+                EditorGUI.PropertyField(position,property,label,true);
+            }
+            else
+            {
+                //Draw the property as a Slider or IntSlider based on whether it's a float or integer.
+                if (property.propertyType == SerializedPropertyType.Float)
+                {
+                    EditorGUI.Slider(position,property,HideAttribute.range.min, HideAttribute.range.max, label);
+                }
+                else if(property.propertyType == SerializedPropertyType.Integer)
+                {
+                    EditorGUI.Slider(position,property, Convert.ToInt32(HideAttribute.range.max), Convert.ToInt32(HideAttribute.range.min),label);
+                }
+                else
+                {
+                    EditorGUI.LabelField(position, label.text, "Use Range with float or int.");
+                }
+                
+            }
         }
 
         GUI.enabled = WasEnabled;

@@ -26,7 +26,7 @@ public class Action : MonoBehaviour
 
     [ConditionalHide("Hide")]
     [SerializeField] private GameObject Button;
-    [ConditionalHide("Hide")]
+    
     [SerializeField] public GameObject DialogueWindow;
 
     [Space(height: 5f)]
@@ -35,7 +35,8 @@ public class Action : MonoBehaviour
 
     [SerializeField] public float Delay = 0;
     
-    
+    [ConditionalHide("Hide", false, true, 1, 2)]
+    public float TestFloat;
 
     bool DialogueWindowIsActive = false;
     bool InActionRadius = false;
