@@ -20,11 +20,12 @@ public class Action : MonoBehaviour
     [Header("Trigger Collider Settings")]
     [SerializeField] private float TriggerColliderX = 3.2f;
     [SerializeField] private float TriggerColliderY = 2.5f;
+    [SerializeField] private float TriggerColliderZ = 2.5f;
 
     [Space(height: 5f)]
     [Header("GameObjects")]
 
-    [ConditionalHide("Hide")]
+    [HideIfEnumValue("Type", HideIf.Equal, (int) ActionType.VisualNovel)]
     [SerializeField] private GameObject Button;
     
     [SerializeField] public GameObject DialogueWindow;
@@ -33,11 +34,9 @@ public class Action : MonoBehaviour
     [Header("Scripts")]
     public DialogueSystem.DialogueSystem DialogueSystem;
 
-    [SerializeField] public float Delay = 0;
+    [HideIfEnumValue("Type", HideIf.NotEqual, (int) ActionType.VisualNovel)]
+    public float StartDelay = 0;    
     
-    [ConditionalHide("Hide", false, true, 1, 2)]
-    public float TestFloat;
-
     bool DialogueWindowIsActive = false;
     bool InActionRadius = false;
     bool DialogueIsOver = false;
@@ -51,7 +50,7 @@ public class Action : MonoBehaviour
     {
         if (Type == ActionType.VisualNovel)
         {
-            StartCoroutine(StartDialogue(Delay)) ;
+            StartCoroutine(StartDialogue(StartDelay)) ;
         }
     }
     void Update()
@@ -125,9 +124,9 @@ public class Action : MonoBehaviour
 
     private void SetUpTriggerCollider()
     {
-        BoxCollider2D TriggerCollider = this.gameObject.AddComponent<BoxCollider2D>();
+        BoxCollider TriggerCollider = this.gameObject.AddComponent<BoxCollider>();
         TriggerCollider.isTrigger = true;
-        Vector2 TriggerSize = new Vector2(TriggerColliderX, TriggerColliderY);
+        Vector3 TriggerSize = new Vector3(TriggerColliderX, TriggerColliderY, TriggerColliderZ);
         TriggerCollider.size = TriggerSize;
     }
 
@@ -150,7 +149,7 @@ public class Action : MonoBehaviour
     }
     void StartOnlyDialogue()
     {
-        StartCoroutine(StartDialogue(Delay));
+        StartCoroutine(StartDialogue(StartDelay));
     }
 
     void SetUpActionComponent()
@@ -231,40 +230,13 @@ public class Action : MonoBehaviour
     }
 
 
-    public IEnumerator StartDialogue(float Delay)
+    public IEnumerator StartDialogue(float StartDelay)
     {
 
-        yield return new WaitForSeconds(Delay);
+        yield return new WaitForSeconds(StartDelay);
         
         OpenDialogueWindow();
         Debug.Log("ДА");
         
     }
-}
-
-public class ActionEditor : Editor
-{
-    public override void OnInspectorGUI()
-    {
-        Action ActionComponent = (Action)target;
-
-
-        if (ActionComponent.Type == Action.ActionType.Dialogue)
-        {
-            ActionComponent.Delay = EditorGUILayout.DelayedFloatField(ActionComponent.Delay,GUIStyle.none);
-        }
-
-
-        else if (ActionComponent.Type == Action.ActionType.Item)
-        {
-
-        }
-        
-        else if (ActionComponent.Type == Action.ActionType.VisualNovel)
-        {
-           
-        }
-    }
-    
-    
 }
