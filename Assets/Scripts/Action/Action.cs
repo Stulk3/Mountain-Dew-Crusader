@@ -4,7 +4,7 @@ using UnityEngine;
 using DialogueSystem;
 using UnityEditor;
 
-
+[RequireComponent(typeof(BoxCollider2D))]
 public class Action : MonoBehaviour
 {
     public bool Hide = false;
@@ -25,21 +25,21 @@ public class Action : MonoBehaviour
     [Space(height: 5f)]
     [Header("GameObjects")]
 
-    [HideIfEnumValue("Type", HideIf.Equal, (int) ActionType.VisualNovel)]
     [SerializeField] private GameObject Button;
     
     [SerializeField] public GameObject DialogueWindow;
 
     [Space(height: 5f)]
     [Header("Scripts")]
+    
     public DialogueSystem.DialogueSystem DialogueSystem;
 
     [HideIfEnumValue("Type", HideIf.NotEqual, (int) ActionType.VisualNovel)]
     public float StartDelay = 0;    
     
-    bool DialogueWindowIsActive = false;
-    bool InActionRadius = false;
-    bool DialogueIsOver = false;
+    [SerializeField] bool DialogueWindowIsActive = false;
+    [SerializeField] bool InActionRadius = false;
+    [SerializeField] bool DialogueIsOver = false;
 
 
     private void Awake()
@@ -69,9 +69,18 @@ public class Action : MonoBehaviour
 
         ActionButtonDisappear();
     }
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        switch (Type)
+    private void OnTriggerEnter2D(Collider2D collision) {
+        Debug.Log("Есть в радиусе");
+        if (collision.gameObject.tag == "Player" && InActionRadius == false && DialogueIsOver == false)
+        {
+            
+            InActionRadius = true;
+            if (Button != null)
+            {
+                Button.SetActive(true);
+            }
+        }
+        /* switch (Type)
         {
             case (ActionType.Dialogue):
                 DialogueOnTriggerEnter(collision); break;
@@ -79,38 +88,11 @@ public class Action : MonoBehaviour
             case (ActionType.Item): break;
 
             case (ActionType.VisualNovel): break;
-        }
+        } */
     }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        switch (Type)
-        {
-            case (ActionType.Dialogue):
-                DialogueOnTriggerExit(collision); break;
-
-            case (ActionType.Item): break;
-
-            case (ActionType.VisualNovel): break;
-        }
-    }
-
-
-    private void DialogueOnTriggerEnter(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player" && InActionRadius == false && DialogueIsOver == false)
-        {
-
-            InActionRadius = true;
-            if (Button != null)
-            {
-                Button.SetActive(true);
-            }
-        }
-    }
-    private void DialogueOnTriggerExit(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player" && InActionRadius == true && DialogueIsOver == false)
+   
+    private void OnTriggerExit2D(Collider2D collision) {
+          if (collision.gameObject.tag == "Player" && InActionRadius == true && DialogueIsOver == false)
         {
 
             InActionRadius = false;
@@ -119,13 +101,23 @@ public class Action : MonoBehaviour
                 Button.SetActive(false);
             }
         }
+        /* switch (Type)
+        {
+            case (ActionType.Dialogue):
+                DialogueOnTriggerExit(collision); break;
+
+            case (ActionType.Item): break;
+
+            case (ActionType.VisualNovel): break;
+        } */
     }
+
 
 
     private void SetUpTriggerCollider()
     {
-        BoxCollider TriggerCollider = this.gameObject.AddComponent<BoxCollider>();
-        TriggerCollider.isTrigger = true;
+        BoxCollider2D TriggerCollider = this.gameObject.GetComponent<BoxCollider2D>();
+        //TriggerCollider.isTrigger = true;
         Vector3 TriggerSize = new Vector3(TriggerColliderX, TriggerColliderY, TriggerColliderZ);
         TriggerCollider.size = TriggerSize;
     }
@@ -236,7 +228,6 @@ public class Action : MonoBehaviour
         yield return new WaitForSeconds(StartDelay);
         
         OpenDialogueWindow();
-        Debug.Log("ДА");
         
     }
 }
