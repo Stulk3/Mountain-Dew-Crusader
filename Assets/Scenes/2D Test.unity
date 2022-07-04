@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 91458388}
   - component: {fileID: 91458389}
   - component: {fileID: 91458390}
+  - component: {fileID: 91458391}
   m_Layer: 0
   m_Name: Start Dialogue
   m_TagString: Untagged
@@ -189,7 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hide: 0
-  Type: 0
+  Type: 1
   TriggerColliderX: 3.2
   TriggerColliderY: 2.5
   TriggerColliderZ: 2.5
@@ -197,6 +198,9 @@ MonoBehaviour:
   DialogueWindow: {fileID: 0}
   DialogueSystem: {fileID: 0}
   StartDelay: 0
+  DialogueWindowIsActive: 0
+  InActionRadius: 0
+  DialogueIsOver: 0
 --- !u!82 &91458390
 AudioSource:
   m_ObjectHideFlags: 0
@@ -293,6 +297,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &91458391
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91458386}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &97468482 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8533809870193704999, guid: 86466306e68f10743b6000aa6ebec710,
@@ -752,6 +769,7 @@ GameObject:
   - component: {fileID: 576612554}
   - component: {fileID: 576612553}
   - component: {fileID: 576612556}
+  - component: {fileID: 576612557}
   m_Layer: 0
   m_Name: Batman Dialogue
   m_TagString: Untagged
@@ -777,7 +795,7 @@ MonoBehaviour:
   SoundEffect: {fileID: 0}
   CharacterVoice: {fileID: 0}
   DialogueVoiceSource: {fileID: 0}
-  ActionComponent: {fileID: 0}
+  ActionComponent: {fileID: 576612554}
   AudioSourceGroup: {fileID: 1233547881}
 --- !u!114 &576612554
 MonoBehaviour:
@@ -798,8 +816,11 @@ MonoBehaviour:
   TriggerColliderZ: 2.5
   Button: {fileID: 254013281}
   DialogueWindow: {fileID: 97468482}
-  DialogueSystem: {fileID: 91458388}
+  DialogueSystem: {fileID: 576612553}
   StartDelay: 2
+  DialogueWindowIsActive: 0
+  InActionRadius: 0
+  DialogueIsOver: 0
 --- !u!4 &576612555
 Transform:
   m_ObjectHideFlags: 0
@@ -910,6 +931,32 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!61 &576612557
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576612552}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &706788996
 GameObject:
   m_ObjectHideFlags: 0
@@ -1878,7 +1925,7 @@ PrefabInstance:
     - target: {fileID: 4810580549991045732, guid: 82c7cd47f81f40b4d88697f2d804873a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.81
+      value: 1.84
       objectReference: {fileID: 0}
     - target: {fileID: 4810580549991045732, guid: 82c7cd47f81f40b4d88697f2d804873a,
         type: 3}
@@ -1888,7 +1935,7 @@ PrefabInstance:
     - target: {fileID: 4810580549991045732, guid: 82c7cd47f81f40b4d88697f2d804873a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.13
       objectReference: {fileID: 0}
     - target: {fileID: 4810580549991045732, guid: 82c7cd47f81f40b4d88697f2d804873a,
         type: 3}
@@ -1923,6 +1970,21 @@ PrefabInstance:
     - target: {fileID: 4810580549991045732, guid: 82c7cd47f81f40b4d88697f2d804873a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810580549991045736, guid: 82c7cd47f81f40b4d88697f2d804873a,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810580549991045737, guid: 82c7cd47f81f40b4d88697f2d804873a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810580549991045737, guid: 82c7cd47f81f40b4d88697f2d804873a,
+        type: 3}
+      propertyPath: m_AutoTiling
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4810580549991045743, guid: 82c7cd47f81f40b4d88697f2d804873a,
@@ -2008,6 +2070,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dialogue Window
+      objectReference: {fileID: 0}
+    - target: {fileID: 8533809870193704999, guid: 86466306e68f10743b6000aa6ebec710,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86466306e68f10743b6000aa6ebec710, type: 3}

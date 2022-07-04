@@ -47,9 +47,12 @@ public abstract class HidingAttributeDrawer : PropertyDrawer {
             if (typeToDrawerType.TryGetValue(typeOfProp, out drawerType)) {
                 var drawer = drawerTypeToDrawerInstance.GetOrAdd(drawerType, () => CreateDrawerInstance(drawerType));
                 drawer.OnGUI(position, property, label);
+                
             }
-            else {
+            else 
+            {
                 EditorGUI.PropertyField(position, property, label, true);
+                
             }
         }
     }

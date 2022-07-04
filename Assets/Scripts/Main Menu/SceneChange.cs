@@ -72,6 +72,7 @@ public class SceneChange : MonoBehaviour
 
         FadeInTime = FadeInTime - 0.01f;
         
+        
         Debug.Log(FadeImageOpacity);
         
 

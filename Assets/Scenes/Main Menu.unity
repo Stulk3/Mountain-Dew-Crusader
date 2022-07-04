@@ -1439,7 +1439,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1107942729}
         m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
-        m_MethodName: FadeOnNextScene
+        m_MethodName: LoadNextScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2795,7 +2795,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b039fd9c6d333a84097736c347d16a5d, type: 3}
   - {fileID: 8300000, guid: 2152e11c8eb1ac145801d0e6b01d857a, type: 3}
   - {fileID: 8300000, guid: 07b019c6e1333894ba7c491ec69132b0, type: 3}
-  AudioSource: {fileID: 0}
+  AudioSource: {fileID: 2034407515}
   RandomMultiplier: 0
 --- !u!82 &2034407515
 AudioSource:
