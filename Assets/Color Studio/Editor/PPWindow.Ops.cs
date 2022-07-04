@@ -54,7 +54,7 @@ namespace ColorStudio {
             Graphics.Blit(tex, rtt);
 
             // Update new texture
-            tex.Resize(width, height, TextureFormat.ARGB32, false);
+            tex.Reinitialize(width, height, TextureFormat.ARGB32, false);
             tex.ReadPixels(texR, 0, 0, true);
             tex.Apply(true);
 

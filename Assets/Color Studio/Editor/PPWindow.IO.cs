@@ -53,7 +53,7 @@ namespace ColorStudio {
             }
             if (texture != null) {
                 if (texture.width != canvasTexture.width || texture.height != canvasTexture.width) {
-                    texture.Resize(canvasTexture.width, canvasTexture.height);
+                    texture.Reinitialize(canvasTexture.width, canvasTexture.height);
                 }
                 // convert to linear
                 if (texture.IsLinear()) {

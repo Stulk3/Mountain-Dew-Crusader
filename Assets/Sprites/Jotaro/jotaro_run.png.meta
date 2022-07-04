@@ -48,6 +48,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -316,6 +317,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      jotaro_run_6: 3987813718985736385
+      jotaro_run_7: -6676592013327020844
+      jotaro_run_2: -6398310810670282112
+      jotaro_run_0: 4929566878799858153
+      jotaro_run_4: 1568607448230889821
+      jotaro_run_5: 2358019307679747132
+      jotaro_run_1: -1260415152563095550
+      jotaro_run_3: -3648510195041279966
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
