@@ -16,7 +16,6 @@ Material:
   - _ENABLEPATTERNOVERLAY_ON
   - _ENABLESTARSROTATION_ON
   - _ENABLESTARSTWINKLING_ON
-  - _ENABLESUN_ON
   m_InvalidKeywords:
   - _BUILTINFOG_ON
   - _CLOUDS_ON
@@ -231,7 +230,7 @@ Material:
     - _EnableStarsRotation: 1
     - _EnableStarsSunMask: 1
     - _EnableStarsTwinkling: 1
-    - _EnableSun: 1
+    - _EnableSun: 0
     - _EnableSunMask: 1
     - _EnableSunMoon: 1
     - _EnableSunMoonMask: 1
@@ -285,11 +284,11 @@ Material:
     - _StarsHeigntMask: 1
     - _StarsHorizonMask: 1
     - _StarsIntensity: 1.43
-    - _StarsLayer: 3
+    - _StarsLayer: 1
     - _StarsMaskPower: 1
     - _StarsRotation: 360
     - _StarsRotationSpeed: 0.25
-    - _StarsSize: 0.689
+    - _StarsSize: 0.161
     - _StarsSunMask: 0.01
     - _SunCat: 1
     - _SunIntensity: 2

@@ -1564,7 +1564,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 898468801}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ce9a86b52cfdd2b4f82a9152c128063e, type: 3}
@@ -2633,6 +2633,122 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1866312519}
   m_CullTransparentMesh: 0
+--- !u!1001 &1953217118
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2133915684049951699, guid: a5622182eb5c80d4090797d80bbf7abc,
+        type: 3}
+      propertyPath: spatialSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133915684049951699, guid: a5622182eb5c80d4090797d80bbf7abc,
+        type: 3}
+      propertyPath: instancedEnums
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133915684049951699, guid: a5622182eb5c80d4090797d80bbf7abc,
+        type: 3}
+      propertyPath: sceneMusicEnumName
+      value: JSAM.MusicMainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133915684049951699, guid: a5622182eb5c80d4090797d80bbf7abc,
+        type: 3}
+      propertyPath: sceneSoundEnumName
+      value: JSAM.SoundsMainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133915684049951699, guid: a5622182eb5c80d4090797d80bbf7abc,
+        type: 3}
+      propertyPath: wasInstancedBefore
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133915684049951699, guid: a5622182eb5c80d4090797d80bbf7abc,
+        type: 3}
+      propertyPath: audioFileMusicObjects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133915684049951699, guid: a5622182eb5c80d4090797d80bbf7abc,
+        type: 3}
+      propertyPath: audioFileMusicObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: c63ecbfa7ecf62042a6a829ca2e2697f,
+        type: 2}
+    - target: {fileID: 2133915684049951699, guid: a5622182eb5c80d4090797d80bbf7abc,
+        type: 3}
+      propertyPath: audioFileMusicObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: d6ac77f888aae8742ab67d23a421ea8e,
+        type: 2}
+    - target: {fileID: 4502563656087406104, guid: a5622182eb5c80d4090797d80bbf7abc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502563656087406104, guid: a5622182eb5c80d4090797d80bbf7abc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502563656087406104, guid: a5622182eb5c80d4090797d80bbf7abc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502563656087406104, guid: a5622182eb5c80d4090797d80bbf7abc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502563656087406104, guid: a5622182eb5c80d4090797d80bbf7abc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502563656087406104, guid: a5622182eb5c80d4090797d80bbf7abc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502563656087406104, guid: a5622182eb5c80d4090797d80bbf7abc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502563656087406104, guid: a5622182eb5c80d4090797d80bbf7abc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502563656087406104, guid: a5622182eb5c80d4090797d80bbf7abc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502563656087406104, guid: a5622182eb5c80d4090797d80bbf7abc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502563656087406104, guid: a5622182eb5c80d4090797d80bbf7abc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502563656087406110, guid: a5622182eb5c80d4090797d80bbf7abc,
+        type: 3}
+      propertyPath: m_Name
+      value: Audio Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7112441608467955345, guid: a5622182eb5c80d4090797d80bbf7abc,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5622182eb5c80d4090797d80bbf7abc, type: 3}
 --- !u!1 &2006664960
 GameObject:
   m_ObjectHideFlags: 0
