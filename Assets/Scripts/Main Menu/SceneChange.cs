@@ -14,7 +14,7 @@ public class SceneChange : MonoBehaviour
     [SerializeField] private float FadeInDelay = 0.0f;
     [SerializeField] private float FadeOutDelay = 0.0f;
     [Header("Fade Image")]
-    private GameObject FadeGameObject;
+    [SerializeField] private GameObject FadeGameObject;
     private Image FadeImage;
 
     private float FadeImageOpacity = 0f;
@@ -68,15 +68,31 @@ public class SceneChange : MonoBehaviour
     }
     IEnumerator FadeIn()
     {
-        yield return new WaitForSeconds(FadeOutDelay);
+        if(FadeInDelay != 0)
+        {
+            yield return new WaitForSeconds(FadeInDelay);
+            FadeInDelay = 0;
+        }
 
-        FadeInTime = FadeInTime - 0.01f;
+        //yield return new WaitForSeconds(FadeInOpacityChangeStep);
+        //yield return new WaitForSeconds(FadeInTime/60);
+        for (float i = FadeInTime; i >= 0; i -= i/60)
+        {
+            Debug.Log(FadeInTime);
+            FadeInTime = FadeInTime - (FadeInTime/60);
+            DecreaseFadeOpacity();
+        }
         
         
-        Debug.Log(FadeImageOpacity);
         
-
-        yield return StartCoroutine(FadeIn());
+        if(FadeInTime <= 0)
+        {
+            StopCoroutine((FadeIn()));
+            Debug.LogWarning("Остановилось");
+        }
+        //yield return StartCoroutine(FadeIn());
+        
+        
     }
 
     void CheckForFadeImageComponent()
@@ -106,10 +122,10 @@ public class SceneChange : MonoBehaviour
 
     void CalculateFadeInOpacityChangeStep()
     {
-        FadeInOpacityChangeStep = FadeInTime/50;
+        FadeInOpacityChangeStep = FadeInTime/60;
     }
     void CalculateFadeOutOpacityChangeStep()
     {
-        FadeOutOpacityChangeStep = FadeOutTime/50;
+        FadeOutOpacityChangeStep = FadeInTime/60;
     }
 }
