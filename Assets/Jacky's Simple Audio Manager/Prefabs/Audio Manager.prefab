@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4502563656087406104}
   - component: {fileID: 2133915684049951699}
-  - component: {fileID: 7112441608467955345}
+  - component: {fileID: 8961091897147573965}
   m_Layer: 0
   m_Name: Audio Manager
   m_TagString: Untagged
@@ -69,7 +69,7 @@ MonoBehaviour:
   sourcePrefab: {fileID: 3048837711066349604, guid: cf11aed7e0e56ae45afe7eaebe30a616,
     type: 3}
   audioFolderLocation: Assets/Audio Files
---- !u!114 &7112441608467955345
+--- !u!114 &8961091897147573965
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -30,8 +30,6 @@ MonoBehaviour:
   fadeMode: 0
   fadeInDuration: 0
   fadeOutDuration: 0
-  clipStartPosition: 0
-  clipEndPosition: 0
   bypassEffects: 0
   bypassListenerEffects: 0
   bypassReverbZones: 0
@@ -81,6 +79,6 @@ MonoBehaviour:
     density: 0
   clampToLoopPoints: 1
   loopMode: 2
-  loopStart: 41.84671
+  loopStart: 48
   loopEnd: 95.986
   bpm: 160
