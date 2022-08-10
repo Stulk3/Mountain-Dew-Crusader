@@ -261,11 +261,11 @@ Material:
     - _Mode: 0
     - _MoonCat: 1
     - _MoonIntensity: 4.15
-    - _MoonSize: 0.29
+    - _MoonSize: 0.311
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _PatternCat: 1
-    - _PatternContrast: 0.072
+    - _PatternContrast: 0.54
     - _PatternOverlay: 1
     - _RoatationSpeed: 0.4
     - _Rotation: 0
