@@ -152,15 +152,14 @@ GameObject:
   - component: {fileID: 8176488132985511331}
   - component: {fileID: 8177247356161053839}
   - component: {fileID: 8176947759678282537}
-  - component: {fileID: 8176849875063330239}
   - component: {fileID: 8176409544416478527}
   - component: {fileID: 8177213209742200495}
   - component: {fileID: 8177376633281283271}
   - component: {fileID: 8176353159560603531}
   - component: {fileID: 8177286843368390927}
-  - component: {fileID: 8175458261611834031}
   - component: {fileID: 8177015161349566665}
   - component: {fileID: 4741938152902012386}
+  - component: {fileID: 6564022183516167124}
   m_Layer: 10
   m_Name: Young Vladlen
   m_TagString: Player
@@ -308,7 +307,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8136677003484818791}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af3b7ab2b51f5c2419cc72bff008ff0f, type: 3}
   m_Name: 
@@ -318,8 +317,8 @@ MonoBehaviour:
   AbilityStopSfx: {fileID: 0}
   AbilityStartFeedbacks: {fileID: 0}
   AbilityStopFeedbacks: {fileID: 0}
-  AbilityPermitted: 1
-  FacingMode: 1
+  AbilityPermitted: 0
+  FacingMode: 0
   ModelShouldFlip: 1
   ModelFlipValueLeft: {x: -1, y: 1, z: 1}
   ModelFlipValueRight: {x: 1, y: 1, z: 1}
@@ -387,29 +386,6 @@ MonoBehaviour:
     CooldownState: 0
     CurrentDurationLeft: 0
   DashFeedback: {fileID: 0}
---- !u!114 &8176849875063330239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8136677003484818791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c86c96e06d6ae44b822a6ab24e1b8fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AbilityStartSfx: {fileID: 0}
-  AbilityInProgressSfx: {fileID: 0}
-  AbilityStopSfx: {fileID: 0}
-  AbilityStartFeedbacks: {fileID: 0}
-  AbilityStopFeedbacks: {fileID: 0}
-  AbilityPermitted: 1
-  JumpDuration: 1
-  JumpProportionalToPress: 1
-  MinimumPressTime: 0.4
-  JumpStartFeedback: {fileID: 0}
-  JumpStopFeedback: {fileID: 0}
 --- !u!114 &8176409544416478527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458,7 +434,7 @@ MonoBehaviour:
   AbilityStartFeedbacks: {fileID: 0}
   AbilityStopFeedbacks: {fileID: 0}
   AbilityPermitted: 1
-  RunSpeed: 16
+  RunSpeed: 8
   AutoRun: 0
   AutoRunThreshold: 0.6
 --- !u!114 &8177376633281283271
@@ -528,38 +504,6 @@ MonoBehaviour:
     CanInterruptRefill: 1
     CooldownState: 0
     CurrentDurationLeft: 0
---- !u!114 &8175458261611834031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8136677003484818791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01754710d9f92ec4d9a21b81f5682667, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Model: {fileID: 0}
-  CurrentHealth: 100
-  Invulnerable: 0
-  InitialHealth: 100
-  MaximumHealth: 100
-  ImmuneToKnockback: 0
-  DamageMMFeedbacks: {fileID: 0}
-  DestroyOnDeath: 1
-  DelayBeforeDestruction: 0
-  PointsWhenDestroyed: 0
-  RespawnAtInitialLocation: 0
-  DisableControllerOnDeath: 1
-  DisableModelOnDeath: 1
-  DisableCollisionsOnDeath: 1
-  DisableChildCollisionsOnDeath: 0
-  ChangeLayerOnDeath: 0
-  ChangeLayersRecursivelyOnDeath: 0
-  LayerOnDeath:
-    _layerIndex: 0
-  DeathMMFeedbacks: {fileID: 0}
 --- !u!114 &8177015161349566665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -618,3 +562,16 @@ MonoBehaviour:
   RotationSpeedResetSpeed: 2
   ForcedRotation: 0
   ForcedRotationDirection: {x: 0, y: 0, z: 0}
+--- !u!114 &6564022183516167124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8136677003484818791}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11b2a2a3278b3d547ad8073c71921619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _vladlenMovement: {fileID: 8176409544416478527}
